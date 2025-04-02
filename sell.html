@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sand & Rock Real Estate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asset/css/bootstrap.css">
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
-    <link rel="stylesheet" href="asset/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/bootstrap.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>Document</title>
-
 </head>
 <style>
     .modal-dialog {
@@ -26,7 +26,7 @@
     }
 
     .modal-content {
-        background: url('asset/image/model_back.jpg') no-repeat center center / cover;
+        background: url("asset/image/model_back.jpg") no-repeat center center / cover;
         color: white;
     }
 
@@ -71,21 +71,24 @@
 
 <body>
     <nav>
-        <a href="index.html"><img src="asset/image/SandRock.svg" alt="logo"></a>
+        <a href="index.html"><img src="asset/image/SandRock.svg" class="w-100" alt="logo" /></a>
         <label for="toggler">
             <i class="fa fa-bars text-black"></i>
         </label>
-        <input type="checkbox" id="toggler" name="">
+        <input type="checkbox" id="toggler" name="" />
         <div class="menu">
             <ul class="list">
                 <li class="list_item"><a href="about.html">About</a></li>
-                <li class="list_item"><a href="">Buy</a></li>
-                <li class="list_item"><a href="">Rent</a></li>
+                <li class="list_item"><a href="buy.html">Buy</a></li>
+                <li class="list_item"><a href="rent.html">Rent</a></li>
                 <li class="list_item"><a href="sell.html">Sell</a></li>
                 <li class="list_item"><a href="career.html">Career</a></li>
-                <li class="list_item" data-bs-toggle="modal" data-bs-target="#selModel">Contact Us</li>
-                <li class="list_item btn-list-property">
-                    <a href="#" class="text-white">List your Property</a>
+                <li class="list_item" data-bs-toggle="modal" data-bs-target="#selModel">
+                    Contact Us
+                </li>
+                <li class="list_item btn-list-property text-white p-2 text-center cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#propertyModal">
+                    List your Property
                 </li>
             </ul>
         </div>
@@ -96,145 +99,150 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="asset/image/sandrocklogo.svg" alt="" class="w-50 mb-5">
+                            <img src="asset/image/sandrocklogo.svg" alt="" class="w-50 mb-5" />
 
                             <div class="container">
-                                <p><i class="fa fa-location-dot"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai
-                                    UAE</p>
+                                <p>
+                                    <i class="fa fa-location-dot"></i> 201,Bank Street
+                                    Building,Near Burjuman Mall,Dubai UAE
+                                </p>
                                 <p><i class="fa fa-phone"></i> +971-585505899</p>
-                                <p><i class="fa-solid fa-envelope"></i> info@sandandrockrealesate.com</p>
+                                <p>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    info@sandandrockrealesate.com
+                                </p>
                             </div>
-                            <hr>
-                            <p class="border-warning text-center">Copyright &copy; 2024 Sand&rocks</p>
-
+                            <hr />
+                            <p class="border-warning text-center">
+                                Copyright &copy; 2024 Sand&rocks
+                            </p>
                         </div>
                         <div class="col-md-6">
                             <div class="container">
                                 <h1 class="text-black">Contact us</h1>
                                 <div class="contact_head mb-3"></div>
-                                <p class="text-black" style="font-size: 13px;">Contact us today to explore exclusive
-                                    luxury homes and find
-                                    your
-                                    perfect dream property.</p>
+                                <p class="text-black" style="font-size: 13px">
+                                    Contact us today to explore exclusive luxury homes and find
+                                    your perfect dream property.
+                                </p>
                                 <div class="row">
                                     <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border" placeholder="Name">
+                                        <input type="text" class="form-control input_border" placeholder="Name" />
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <input type="email" class="form-control input_border" placeholder="Email">
+                                        <input type="email" class="form-control input_border" placeholder="Email" />
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <div class="phone-input-container">
                                             <div class="dropdown" id="dropdown1">
-                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                                 <span>+971</span>
                                             </div>
-                                            <input type="tel" id="phone1" placeholder="Phone">
+                                            <input type="tel" id="phone1" placeholder="Phone" />
                                             <div class="dropdown-list text-black" id="dropdown-list1">
                                                 <div data-code="+971">
-                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                                     UAE (+971)
                                                 </div>
                                                 <div data-code="+91">
-                                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
+                                                    <img src="https://flagcdn.com/w40/in.png" alt="India" />
                                                     India (+91)
                                                 </div>
                                                 <div data-code="+1">
-                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
+                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA" />
                                                     USA (+1)
                                                 </div>
                                                 <div data-code="+44">
-                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
+                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK" />
                                                     UK (+44)
                                                 </div>
                                                 <div data-code="+61">
-                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
+                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia" />
                                                     Australia (+61)
                                                 </div>
                                                 <div data-code="+81">
-                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
+                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan" />
                                                     Japan (+81)
                                                 </div>
                                                 <div data-code="+33">
-                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
+                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France" />
                                                     France (+33)
                                                 </div>
                                                 <div data-code="+49">
-                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany" />
                                                     Germany (+49)
                                                 </div>
                                                 <div data-code="+86">
-                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China" />
                                                     China (+86)
                                                 </div>
                                                 <div data-code="+39">
-                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
+                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy" />
                                                     Italy (+39)
                                                 </div>
                                                 <div data-code="+7">
-                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia" />
                                                     Russia (+7)
                                                 </div>
                                                 <div data-code="+55">
-                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil" />
                                                     Brazil (+55)
                                                 </div>
                                                 <div data-code="+34">
-                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
+                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain" />
                                                     Spain (+34)
                                                 </div>
                                                 <div data-code="+52">
-                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
+                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico" />
                                                     Mexico (+52)
                                                 </div>
                                                 <div data-code="+27">
-                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
+                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa" />
                                                     South Africa (+27)
                                                 </div>
                                                 <div data-code="+47">
-                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
+                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway" />
                                                     Norway (+47)
                                                 </div>
                                                 <div data-code="+65">
-                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" />
                                                     Singapore (+65)
                                                 </div>
                                                 <div data-code="+82">
-                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
+                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea" />
                                                     South Korea (+82)
                                                 </div>
                                                 <div data-code="+31">
-                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
+                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" />
                                                     Netherlands (+31)
                                                 </div>
                                                 <div data-code="+41">
-                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
+                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" />
                                                     Switzerland (+41)
                                                 </div>
                                                 <div data-code="+46">
-                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
+                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden" />
                                                     Sweden (+46)
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <input type="text" class="form-control input_border"
-                                            placeholder="Property type">
+                                            placeholder="Property type" />
                                     </div>
                                     <div class="col-md-12 mb-2">
                                         <textarea class="form-control input_border" rows="1"
                                             placeholder="Description"></textarea>
                                     </div>
                                     <div class="col-md-12 mb-2 mt-2">
-                                        <button type="button"
-                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
+                                        <button type="button" class="btn btn-warning rounded-5 px-4 py-2 float-end">
+                                            Contact Us
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -242,12 +250,17 @@
     </div>
 
     <div class="container-fluid p-0">
-        <div class="position-relative" style="font-family: Plus Jakarta sans-serif;">
-            <img src="asset/image/sell.svg" alt="" class="img-fluid w-100">
-            <div class="position-absolute top-50 start-50 translate-middle w-75" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-                <p class="text-white para">Sell Your Property Faster</p>
-                <h1 class="text-white display-4 about">With <span class="text-warning">Sand and Rock</span> UAE!</h1>
-                <button class="btn btn-warning text-white mt-4">Book a Valuation</button>
+        <div class="position-relative" style="font-family: Plus Jakarta sans-serif">
+            <img src="asset/image/sell.svg" alt="" class="img-fluid w-100" />
+            <div class="position-absolute top-50 start-50 translate-middle w-75"
+                style="font-family: 'Plus Jakarta Sans', sans-serif">
+                <h4 class="text-white para careerp">Sell Your Property Faster</h4>
+                <h1 class="text-white display-4 about careerh2">
+                    with <span style="color: #e7ff62">Sand and Rock</span> UAE!
+                </h1>
+                <button class="btn btn-warning text-white mt-4">
+                    Book a Valuation
+                </button>
             </div>
         </div>
     </div>
@@ -257,312 +270,581 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="asset/image/sellimg.svg" alt="" class="img-fluid w-100">
+                        <img src="asset/image/sellimg.svg" alt="" class="img-fluid w-100" />
                     </div>
 
-
-                    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center ">
+                    <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
                         <h2 class="text-primary mt-4">Why Choose Sand and Rock UAE? </h2>
-                        <p>Selling your property is a significant step, and we’re here to guide you every step of the
-                            way with unmatched expertise and proven results. </p>
+                        <p>
+                            Selling your property is a significant step, and we’re here to
+                            guide you every step of the way with unmatched expertise and
+                            proven results. 
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <div class="container-fluid py-4" style="background: linear-gradient(to bottom, #FFFFFF, #51769E);">
+    <div class="container-fluid py-4" style="background: linear-gradient(to bottom, #ffffff, #51769e)">
         <div class="container">
-            <h2 class="text-primary text-center py-2">Why Sell with Sand and Rock UAE? </h2>
-            <p class="text-center py-2">Maximize your property’s value with expert guidance, global exposure, tailored
-                marketing, and end-to-end support. We ensure a seamless selling experience with top-tier visibility and
-                professional service.</p>
+            <h2 class="text-primary text-center py-2">
+                Why Sell with Sand and Rock UAE? 
+            </h2>
+            <p class="text-center py-2">
+                Maximize your property’s value with expert guidance, global exposure,
+                tailored marketing, and end-to-end support. We ensure a seamless
+                selling experience with top-tier visibility and professional service.
+            </p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card p-2 h-100 d-flex flex-column">
-                        <img src="asset/image/sell1.svg" alt="" class="align-self-center w-25 p-2">
+                        <img src="asset/image/sell1.svg" alt="" class="align-self-center w-25 p-2 mb-1" />
                         <div class="card-body mt-auto">
                             <h6>Unrivaled Online Visibility</h6>
-                            <p class="mb-0">Your property will be showcased on top platforms and Coldwell Banker’s
-                                global network, reaching the right buyers quickly.</p>
+                            <p class="mb-0">
+                                Your property will be showcased on top platforms and Coldwell
+                                Banker’s global network, reaching the right buyers quickly.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-2 h-100 d-flex flex-column">
-                        <img src="asset/image/sell2.svg" alt="" class="align-self-center w-25 p-2">
+                        <img src="asset/image/sell2.svg" alt="" class="align-self-center w-25 p-2" />
                         <div class="card-body mt-auto">
                             <h6>Local Knowledge, Global Reach</h6>
-                            <p class="mb-0">Benefit from our strong presence in UAE and an international network.</p>
+                            <p class="mb-0">
+                                Benefit from our strong presence in UAE and an international
+                                network.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-2 h-100 d-flex flex-column">
-                        <img src="asset/image/sell3.svg" alt="" class="align-self-center w-25 p-2">
+                        <img src="asset/image/sell3.svg" alt="" class="align-self-center w-25 mb-2 p-2" />
                         <div class="card-body mt-auto">
                             <h6>Tailored Marketing Strategy</h6>
-                            <p class="mb-0">Custom marketing plans to showcase your property to the right audience.</p>
+                            <p class="mb-0">
+                                Custom marketing plans to showcase your property to the right
+                                audience.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-    <div class="container-fluid py-4">
+    <div class="container-fluid py-4 howItwork">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 ml-4">
+                    <h5 class="text-primary mb-3">
+                        Our Seller Services & Exclusive Benefits
+                    </h5>
+                    <p style="
+                font-style: Plus Jakarta Sans;
+                color: #000000cc;
+                width: 580px;
+              ">
+                        Choose the option that best aligns with your goals, each crafted
+                        to enhance your property's visibility and drive a successful sale.
+                    </p>
+                </div>
+                <div class="col-md-6 text-end position-relative">
+                    <img src="asset/image/sellImage.png" alt="" class="img-fluid w-75 rounded" />
+                    <div class="position-absolute top-0 start-0 border-design"></div>
+                    <div class="position-absolute bottom-0 end-0 border-design"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-4 howItwork">
         <div class="container">
             <h2 class="text-primary text-center py-2">How Its Works </h2>
-            <p class="text-center py-2">Selling your property with Sand and Rock UAE is a simple, step-by-step process
-                designed to deliver the best results with minimal stress. </p>
+            <p class="text-center py-2">
+                Selling your property with Sand and Rock UAE is a simple, step-by-step
+                process designed to deliver the best results with minimal stress. 
+            </p>
             <div class="row">
                 <div class="col-md-3">
                     <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work1.svg" alt="" class="align-self-center w-100 p-2">
+                        <img src="asset/image/work1.svg" alt="" class="align-self-center w-100 p-2" />
                         <div class="card-body mt-auto">
                             <h6>Get a Free Valuation</h6>
-                            <p class="mb-0">Start with a free property valuation from one of our expert agents to
-                                understand your property’s market value. </p>
+                            <p class="mb-0">
+                                Start with a free property valuation from one of our expert
+                                agents to understand your property’s market value. 
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work2.svg" alt="" class="align-self-center w-100 p-2">
+                        <img src="asset/image/work2.svg" alt="" class="align-self-center w-100 p-2" />
                         <div class="card-body mt-auto">
                             <h6>List Your Property</h6>
-                            <p class="mb-0">We’ll create a compelling listing with professional photos, descriptions,
-                                and virtual tours, and promote it across multiple platforms. </p>
+                            <p class="mb-0">
+                                We’ll create a compelling listing with professional photos,
+                                descriptions, and virtual tours, and promote it across
+                                multiple platforms. 
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work3.svg" alt="" class="align-self-center w-100 p-2">
+                        <img src="asset/image/work3.svg" alt="" class="align-self-center w-100 p-2" />
                         <div class="card-body mt-auto">
                             <h6>Marketing and Viewings</h6>
-                            <p class="mb-0">Your property will be marketed through our extensive channels, and we’ll
-                                handle all inquiries and viewings. </p>
+                            <p class="mb-0">
+                                Your property will be marketed through our extensive channels,
+                                and we’ll handle all inquiries and viewings. 
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work4.svg" alt="" class="align-self-center w-100 p-2">
+                        <img src="asset/image/work4.svg" alt="" class="align-self-center w-100 p-2" />
                         <div class="card-body mt-auto">
                             <h6>Negotiation and Closing</h6>
-                            <p class="mb-0">Custom marketing plans to showcase your property to the right audience.</p>
+                            <p class="mb-0">
+                                Custom marketing plans to showcase your property to the right
+                                audience.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="container mt-5">
-            <p class="text-primary">Who We are</p>
-            <h2>Expert guidance to help you find the right <span class="text-primary">real estate</span>.</h2>
-            <p>With personalized guidance, we help you find the ideal property that fits your needs, lifestyle, and
-                budget
+    <div class="container-fluid contactcontainer">
+        <div class="container mt-5 text-center">
+            <h4 class="text-primary">We're always here to help</h4>
+            <p>
+                Contact us today to explore exclusive luxury homes and find your
+                perfect dream property.
             </p>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <img src="asset/image/img1.svg" alt="Commercial Projects">
-                        <div class="overlay-text">
-                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
-                                class="small text-nowrap">Commercial Projects</span>
-                        </div>
-
+            <div class="row contactUsContainer">
+                <div class="col-md-1 text-center contactUs">
+                    <img class="CareerAvatar" src="asset/image/CareerAvatar.png" alt="" />
+                    <div>
+                        <h5 class="Profilename">Kayley Hall</h5>
+                        <p class="ViewProfile" style="color: #ffac12">View Profile</p>
                     </div>
-                    <p class="text-center">High-value investments. </p>
+                    <img class="Vectorfifty" src="asset/image/Vector 50.png" alt="" />
                 </div>
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <img src="asset/image/office.svg" alt="Commercial Projects">
-                        <div class="overlay-text">
-                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
-                                class="small text-nowrap">Office</span>
-                        </div>
-                    </div>
-                    <p class="text-center">Premium office spaces for rent.</p>
+                <div class="col-md-2" style="border: 1px solid #ffac12; border-radius: 5px">
+                    <input type="text" class="form-control fieldd" placeholder="Name"
+                        style="background-color: transparent" />
                 </div>
-                <div class="col-md-4">
-                    <div class="card-custom">
-                        <img src="asset/image/land.svg" alt="Commercial Projects">
-                        <div class="overlay-text">
-                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
-                                class="small text-nowrap">Land</span>
-                        </div>
-                    </div>
-                    <p class="text-center">Prime land for development.</p>
+                <div class="col-md-2" style="
+              border: 1px solid #ffac12;
+              border-radius: 5px;
+              text-align: start;
+            ">
+                    <input type="tel" id="phone" class="flagphone fieldd" placeholder="Phone"
+                        style="background-color: transparent" />
+                </div>
+                <div class="col-md-2" style="border: 1px solid #ffac12; border-radius: 5px">
+                    <input type="email" class="form-control fieldd" placeholder="Email"
+                        style="background-color: transparent" />
+                </div>
+                <div class="col-md-2" style="border: 1px solid #ffac12; border-radius: 5px">
+                    <input type="text" class="form-control fieldd" placeholder="Description"
+                        style="background-color: transparent" />
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-warning contactbtn">Contact us</button>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-start">
-                <!-- Item 1 -->
-                <div class="me-4 text-center">
-                    <img src="asset/image/rent_Icon.jpg" alt="Icon 1" style="width: 50px;" class="mb-2">
-                    <h6 class="fw-bold mb-1 text-primary">50k+ renters</h6>
-                    <p class="text-muted small mb-0">believe in our service</p>
-                </div>
-                <!-- Item 2 -->
-                <div class="text-center">
-                    <img src="asset/image/rent_Icon2.jpg" alt="Icon 2" style="width: 50px;" class="mb-2">
-                    <h6 class="fw-bold mb-1 text-primary">10k+ properties</h6>
-                    <p class="text-muted small mb-0">and houses ready for occupancy</p>
-                </div>
-            </div>
+            <p class="text-danger mt-3" style="text-align: start; padding-bottom: 30px; font-size: 12px">
+                NOTE: Our team will connect with you within 2 hours. Thank you for
+                your patience and support.
+            </p>
         </div>
-
     </div>
-    <div class="container-fluid">
-        <div class="testimonial p-3 mt-5 mb-5">
-            <h3 class="text-center">Testimonials</h3>
-            <p class="text-center">See what our property managers, landlords, and <br> tenants have to say</p>
+
+    <div class="container-fluid testimonial">
+        <div class="p-3 mt-5 mb-5">
+            <h3 class="text-center" style="color: #4361ee">Testimonials</h3>
+            <p class="text-center" style="color: #000929; opacity: 70%; font-family: Plus Jakarta Sans">
+                See what our property managers, landlords, and <br />
+                tenants have to say
+            </p>
             <div class="a">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3" style="font-family: Plus Jakarta Sans; width: 60%">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Abhishek</h6>
             </div>
             <div class="b">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3 w-50" style="font-family: Plus Jakarta Sans; width: 60%">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Hitesh</h6>
             </div>
             <div class="c">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3 w-50" style="font-family: Plus Jakarta Sans; width: 60%">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Pawas Goyal</h6>
             </div>
 
             <div class="d-flex justify-content-center">
                 <div class="image-container" id="image1">
-                    <img src="asset/image/testimonial1.jpg" alt="Amara Sheikh">
+                    <img src="asset/image/testimonial1.jpg" alt="Amara Sheikh" />
                     <div class="rotating-border"></div>
                 </div>
                 <div class="image-container" id="image2">
-                    <img src="asset/image/testimonial2.jpg" alt="">
+                    <img src="asset/image/testimonial2.jpg" alt="" />
                     <div class="rotating-border"></div>
                 </div>
                 <div class="image-container" id="image3">
-                    <img src="asset/image/testimonial3.jpg" alt="">
+                    <img src="asset/image/testimonial3.jpg" alt="" />
                     <div class="rotating-border"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid py-4">
-        <div class="container">
-            <h2 class="text-primary text-center py-2">FAQ's</h2>
-            <p class="text-center py-2">Selling your property with Sand and Rock UAE is a simple, step-by-step process
-                designed to deliver the best results with minimal stress. </p>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work1.svg" alt="" class="align-self-center w-100 p-2">
-                        <div class="card-body mt-auto">
-                            <h6>Get a Free Valuation</h6>
-                            <p class="mb-0">Start with a free property valuation from one of our expert agents to
-                                understand your property’s market value. </p>
-                        </div>
+    <div class="container-fluid mt-5 testimonial mt-4">
+        <h2 class="text-primary text-center mb-4">FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How long does it take to sell a property in Dubai?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The time it takes to sell a property in Dubai varies based on
+                        market conditions, property type, and pricing. On average, it can
+                        take between 1 to 3 months.
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work2.svg" alt="" class="align-self-center w-100 p-2">
-                        <div class="card-body mt-auto">
-                            <h6>List Your Property</h6>
-                            <p class="mb-0">We’ll create a compelling listing with professional photos, descriptions,
-                                and virtual tours, and promote it across multiple platforms. </p>
-                        </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What are the Cost involved in selling a property in Dubai?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Costs may include agent commissions, NOC fees, and Dubai Land
+                        Department transfer fees, Trustee Fees.
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work3.svg" alt="" class="align-self-center w-100 p-2">
-                        <div class="card-body mt-auto">
-                            <h6>Marketing and Viewings</h6>
-                            <p class="mb-0">Your property will be marketed through our extensive channels, and we’ll
-                                handle all inquiries and viewings. </p>
-                        </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do I need to be in Dubai to sell My Property?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, you do not need to be in Dubai to sell your property. We can
+                        handle the process on your behalf, including power of attorney
+                        arrangements if required.
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card p-2 h-100 d-flex flex-column border-0">
-                        <img src="asset/image/work4.svg" alt="" class="align-self-center w-100 p-2">
-                        <div class="card-body mt-auto">
-                            <h6>Negotiation and Closing</h6>
-                            <p class="mb-0">Custom marketing plans to showcase your property to the right audience.</p>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Should I sell my property via Real Estate Agent?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, selling your property via a real estate agent is highly
+                        recommended. An experienced agent brings valuable market
+                        knowledge, negotiation skills, and access to a broad network of
+                        potential buyers. They handle all the marketing, paperwork, and
+                        legalities, ensuring a smooth and stress-free selling process.
+                        With an agent, you're more likely to get a higher price for your
+                        property and close the sale faster than if you were to sell it on
+                        your own.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What Documents are Required to list my Properties in Dubai?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Proof of ownership (Title deed or Oqood) obtained from the Dubai
+                        Land Department (DLD). Copy of valid passport of the seller with
+                        the signature page. For UAE residents, copy of your Emirates ID.
+                        No Objection Certificate (NOC) from the seller to
+                        advertise/photograph/video shoot and cover the property on all
+                        portals.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: none">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyModalLabel" style="color: #2b5379">
+                                Find your Property Value
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-header d-flex justify-content-lg-between">
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" checked />
+                                        Owner Details</label>
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" />
+                                        Unit Details</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Name*</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Mobile No.*</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+91</span>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Service Required*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Property Valuation</option>
+                                        <option>Market Price Analysis</option>
+                                        <option>Property Selling Assistance</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary w-25 float-end mb-3" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailsModal" data-bs-dismiss="modal"
+                                    style="background-color: #2b5379">
+                                    Next
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-    <footer class="text-white">
+
+    <!-- Dusra Modal (Property Details) -->
+    <div class="modal fade" id="propertyDetailsModal" tabindex="-1" aria-labelledby="propertyDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: none">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyDetailsModalLabel" style="color: #2b5379">
+                                Find your Property Value
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-header d-flex justify-content-lg-between">
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" checked />
+                                        Owner Details</label>
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" />
+                                        Unit Details</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Location*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the location" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Unit No*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the Unit Number" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Status</label>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" checked />
+                                            <label
+                                                class="form-check-label applylable text-black text-black">Ready</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" />
+                                            <label class="form-check-label applylable text-black text-black">Off
+                                                plan</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Property Type*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Apartment</option>
+                                        <option>Villa</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Number of Bedrooms</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Number of Bathrooms</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-labe applylable text-black">Unit Size (sq ft or sq
+                                        meter)*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Upload Title Deed/Quood</label>
+                                    <input type="file" class="form-control" />
+                                    <div class="form-text">
+                                        Files allowed: PDF, JPG, PNG and Maximum file size: 5MB
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn text-white w-100" style="background-color: #2b5379">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white footer mt-5">
         <div class="container py-4">
             <div class="row">
                 <!-- Logo and Address Section -->
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo" class="w-50 me-2">
-
+                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo" />
                     </div>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai UAE
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street
+                        Building,Near Burjuman Mall,Dubai UAE
                     </p>
                     <p><i class="fas fa-phone-alt me-2"></i> +971-585505899</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@sandandrockrealesate.com</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@sandandrockrealesate.com
+                    </p>
                 </div>
 
                 <!-- Quick Links Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold" style="color: #2B5379;">QUICK LINKS</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">QUICK LINKS</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Project</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                        <li>
+                            <a href="index.html" class="text-white text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-white text-decoration-none">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Project</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Contact</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Legal Links Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold" style="color: #2B5379;">LEGAL LINKS</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">LEGAL LINKS</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Conditions</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Policy</a></li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Terms</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Policy</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Social Media Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold" style="color: #2B5379;">SOCIAL MEDIA</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">SOCIAL MEDIA</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Facebook</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Twitter</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">YouTube</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">LinkedIn</a></li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">LinkedIn</a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <!-- Copyright Section -->
-
         </div>
-        <div class="text-center mt-3 p-2" style="background-color: #2B5379;">
+        <div class="text-center mt-3 p-2" style="background-color: #2b5379">
             <small>Copyright &copy; 2024 Sand&rocks</small>
         </div>
     </footer>
@@ -570,19 +852,18 @@
 <script src="asset/js/bootstrap.bundle.min.js"></script>
 <script>
     // Select the main image element
-    const mainImage = document.getElementById('main-image');
+    const mainImage = document.getElementById("main-image");
 
     // Select all thumbnail images
-    const thumbnails = document.querySelectorAll('.property-thumbnails img');
+    const thumbnails = document.querySelectorAll(".property-thumbnails img");
 
     // Add click event listeners to each thumbnail
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function () {
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
             // Set the src of the main image to the clicked thumbnail's src
             mainImage.src = this.src;
         });
     });
-
 
     function initializeDropdown(dropdownId, listId) {
         const dropdown = document.getElementById(dropdownId);
@@ -618,20 +899,18 @@
     initializeDropdown("dropdown1", "dropdown-list1");
     initializeDropdown("dropdown2", "dropdown-list2");
     initializeDropdown("dropdown3", "dropdown-list3");
-
-
 </script>
 <script>
     // Select all image containers and heading elements
-    const imageContainers = document.querySelectorAll('.image-container');
+    const imageContainers = document.querySelectorAll(".image-container");
     const headings = {
-        a: document.querySelector('.a'),
-        b: document.querySelector('.b'),
-        c: document.querySelector('.c')
+        a: document.querySelector(".a"),
+        b: document.querySelector(".b"),
+        c: document.querySelector(".c"),
     };
 
     // Mapping index to class names
-    const classes = ['a', 'b', 'c'];
+    const classes = ["a", "b", "c"];
 
     let currentIndex = 0;
 
@@ -639,24 +918,24 @@
     function toggleHeading(index) {
         // Hide all headings
         Object.keys(headings).forEach((key) => {
-            headings[key].style.display = 'none';
+            headings[key].style.display = "none";
         });
         // Show current heading
-        headings[classes[index]].style.display = 'block';
+        headings[classes[index]].style.display = "block";
     }
 
     // Function to run animation on current image
     function runAnimation() {
         // Remove active animation from all images
         imageContainers.forEach((container) => {
-            const border = container.querySelector('.rotating-border');
-            border.style.display = 'none';
+            const border = container.querySelector(".rotating-border");
+            border.style.display = "none";
         });
 
         // Show animation on the current image
         const currentContainer = imageContainers[currentIndex];
-        const border = currentContainer.querySelector('.rotating-border');
-        border.style.display = 'block';
+        const border = currentContainer.querySelector(".rotating-border");
+        border.style.display = "block";
 
         // Update heading
         toggleHeading(currentIndex);
@@ -671,6 +950,31 @@
     // Start the animation sequence
     runAnimation();
 
+    function openModal() {
+        document.getElementById("propertyModal").classList.remove("hidden"); // Pehla modal show karein
+    }
+
+    function closeModal() {
+        document.getElementById("propertyModal").classList.add("hidden"); // Pehla modal hide karein
+    }
+
+    function openNextModal() {
+        document.getElementById("propertyModal").classList.add("hidden"); // Pehla modal hide karein
+        document
+            .getElementById("propertyDetailsModal")
+            .classList.remove("hidden"); // Dusra modal show karein
+    }
+
+    function closePropertyDetailsModal() {
+        document.getElementById("propertyDetailsModal").classList.add("hidden"); // Dusra modal hide karein
+    }
+</script>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
 </script>
 
 </html>

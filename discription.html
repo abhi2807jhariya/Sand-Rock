@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sand & Rock Real Estate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asset/css/bootstrap.css">
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
-    <link rel="stylesheet" href="asset/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/bootstrap.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +21,7 @@
         }
 
         .modal-content {
-            background: url('asset/image/model_back.jpg') no-repeat center center / cover;
+            background: url("asset/image/model_back.jpg") no-repeat center center / cover;
             color: white;
         }
 
@@ -67,362 +67,235 @@
 
 <body>
     <nav>
-        <a href="index.html"><img src="asset/image/sandandrocklogo.png" alt="logo" style="width: 30px;"></a>
+        <a href="index.html"><img src="asset/image/SandRock.svg" class="w-100" alt="logo" /></a>
         <label for="toggler">
             <i class="fa fa-bars text-black"></i>
         </label>
-        <input type="checkbox" id="toggler" name="">
+        <input type="checkbox" id="toggler" name="" />
         <div class="menu">
             <ul class="list">
                 <li class="list_item"><a href="about.html">About</a></li>
-                <li class="list_item"><a href="index.html">Buy</a></li>
-                <li class="list_item"><a href="index.html">Rent</a></li>
-                <li class="list_item" data-bs-toggle="modal" data-bs-target="#contactModal"><a href="#">Sell</a></li>
-                <li class="list_item btn-list-property" data-bs-toggle="modal" data-bs-target="#selModel">
-                    <a href="#">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+                <li class="list_item"><a href="buy.html">Buy</a></li>
+                <li class="list_item"><a href="rent.html">Rent</a></li>
+                <li class="list_item"><a href="sell.html">Sell</a></li>
+                <li class="list_item"><a href="career.html">Career</a></li>
+                <li class="list_item" data-bs-toggle="modal" data-bs-target="#ContactModel">
+                    Contact Us
+                </li>
+                <li class="list_item btn-list-property text-white p-2 text-center cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#propertyModal">
+                    List your Property
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="modal fade" id="selModel" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ContactModel" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="asset/image/logo_sandrock.jpg" alt="" class="w-50 mb-5">
+                            <img src="asset/image/sandrocklogo.svg" alt="" class="w-50 mb-5" />
 
                             <div class="container">
-                                <p><i class="fa fa-location-dot"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai
-                                    UAE</p>
+                                <p>
+                                    <i class="fa fa-location-dot"></i> 201,Bank Street
+                                    Building,Near Burjuman Mall,Dubai UAE
+                                </p>
                                 <p><i class="fa fa-phone"></i> +971-585505899</p>
-                                <p><i class="fa-solid fa-envelope"></i> info@sandandrockrealesate.com</p>
+                                <p>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    info@sandandrockrealesate.com
+                                </p>
                             </div>
-                            <hr>
-                            <p class="border-warning text-center">Copyright &copy; 2024 Sand&rocks</p>
-
+                            <hr />
+                            <p class="border-warning text-center">
+                                Copyright &copy; 2024 Sand&rocks
+                            </p>
                         </div>
                         <div class="col-md-6">
                             <div class="container">
                                 <h1 class="text-black">Contact us</h1>
                                 <div class="contact_head mb-3"></div>
-                                <p style="font-size: 13px;">Contact us today to explore exclusive luxury homes and find
-                                    your
-                                    perfect dream property.</p>
+                                <p class="text-black" style="font-size: 13px">
+                                    Contact us today to explore exclusive luxury homes and find
+                                    your perfect dream property.
+                                </p>
+                                <form id="emailForm" action="https://formsubmit.co/ajhariya097@gmail.com" method="POST">
                                 <div class="row">
                                     <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border" placeholder="Name">
+                                        <input type="text" class="form-control input_border" placeholder="Name" />
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <input type="email" class="form-control input_border" placeholder="Email">
+                                        <input type="email" class="form-control input_border" placeholder="Email" />
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <div class="phone-input-container">
                                             <div class="dropdown" id="dropdown1">
-                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                                 <span>+971</span>
                                             </div>
-                                            <input type="tel" id="phone1" placeholder="Phone">
+                                            <input type="tel" id="phone1" placeholder="Phone" />
                                             <div class="dropdown-list text-black" id="dropdown-list1">
                                                 <div data-code="+971">
-                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                                     UAE (+971)
                                                 </div>
                                                 <div data-code="+91">
-                                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
+                                                    <img src="https://flagcdn.com/w40/in.png" alt="India" />
                                                     India (+91)
                                                 </div>
                                                 <div data-code="+1">
-                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
+                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA" />
                                                     USA (+1)
                                                 </div>
                                                 <div data-code="+44">
-                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
+                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK" />
                                                     UK (+44)
                                                 </div>
                                                 <div data-code="+61">
-                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
+                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia" />
                                                     Australia (+61)
                                                 </div>
                                                 <div data-code="+81">
-                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
+                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan" />
                                                     Japan (+81)
                                                 </div>
                                                 <div data-code="+33">
-                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
+                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France" />
                                                     France (+33)
                                                 </div>
                                                 <div data-code="+49">
-                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany" />
                                                     Germany (+49)
                                                 </div>
                                                 <div data-code="+86">
-                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China" />
                                                     China (+86)
                                                 </div>
                                                 <div data-code="+39">
-                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
+                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy" />
                                                     Italy (+39)
                                                 </div>
                                                 <div data-code="+7">
-                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia" />
                                                     Russia (+7)
                                                 </div>
                                                 <div data-code="+55">
-                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil" />
                                                     Brazil (+55)
                                                 </div>
                                                 <div data-code="+34">
-                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
+                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain" />
                                                     Spain (+34)
                                                 </div>
                                                 <div data-code="+52">
-                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
+                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico" />
                                                     Mexico (+52)
                                                 </div>
                                                 <div data-code="+27">
-                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
+                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa" />
                                                     South Africa (+27)
                                                 </div>
                                                 <div data-code="+47">
-                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
+                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway" />
                                                     Norway (+47)
                                                 </div>
                                                 <div data-code="+65">
-                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" />
                                                     Singapore (+65)
                                                 </div>
                                                 <div data-code="+82">
-                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
+                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea" />
                                                     South Korea (+82)
                                                 </div>
                                                 <div data-code="+31">
-                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
+                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" />
                                                     Netherlands (+31)
                                                 </div>
                                                 <div data-code="+41">
-                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
+                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" />
                                                     Switzerland (+41)
                                                 </div>
                                                 <div data-code="+46">
-                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
+                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden" />
                                                     Sweden (+46)
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <input type="text" class="form-control input_border"
-                                            placeholder="Property type">
+                                            placeholder="Property type" />
                                     </div>
                                     <div class="col-md-12 mb-2">
                                         <textarea class="form-control input_border" rows="1"
                                             placeholder="Description"></textarea>
                                     </div>
                                     <div class="col-md-12 mb-2 mt-2">
-                                        <button type="button"
-                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
+                                        <button type="submit" class="btn btn-warning rounded-5 px-4 py-2 float-end">
+                                            Contact Us
+                                        </button>
                                     </div>
                                 </div>
+                            </form>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="asset/image/logo_sandrock.jpg" alt="" class="w-50 mb-5">
-
-                            <div class="container">
-                                <p><i class="fa fa-location-dot"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai
-                                    UAE</p>
-                                <p><i class="fa fa-phone"></i> +971-585505899</p>
-                                <p><i class="fa-solid fa-envelope"></i> info@sandandrockrealesate.com</p>
-                            </div>
-                            <hr>
-                            <p class="border-warning text-center">Copyright &copy; 2024 Sand&rocks</p>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="container">
-                                <h1 class="text-black">Contact us for Sell property</h1>
-                                <div class="contact_head mb-3"></div>
-                                <p style="font-size: 13px;">Contact us today to explore exclusive luxury homes and find
-                                    your
-                                    perfect dream property.</p>
-                                <div class="row">
-                                    <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border" placeholder="Name">
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <input type="email" class="form-control input_border" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <div class="phone-input-container">
-                                            <div class="dropdown" id="dropdown2">
-                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
-                                                <span>+971</span>
-                                            </div>
-                                            <input type="tel" id="phone2" placeholder="Phone">
-                                            <div class="dropdown-list text-black" id="dropdown-list2">
-                                                <div data-code="+971">
-                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
-                                                    UAE (+971)
-                                                </div>
-                                                <div data-code="+91">
-                                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
-                                                    India (+91)
-                                                </div>
-                                                <div data-code="+1">
-                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
-                                                    USA (+1)
-                                                </div>
-                                                <div data-code="+44">
-                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
-                                                    UK (+44)
-                                                </div>
-                                                <div data-code="+61">
-                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
-                                                    Australia (+61)
-                                                </div>
-                                                <div data-code="+81">
-                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
-                                                    Japan (+81)
-                                                </div>
-                                                <div data-code="+33">
-                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
-                                                    France (+33)
-                                                </div>
-                                                <div data-code="+49">
-                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
-                                                    Germany (+49)
-                                                </div>
-                                                <div data-code="+86">
-                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
-                                                    China (+86)
-                                                </div>
-                                                <div data-code="+39">
-                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
-                                                    Italy (+39)
-                                                </div>
-                                                <div data-code="+7">
-                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
-                                                    Russia (+7)
-                                                </div>
-                                                <div data-code="+55">
-                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
-                                                    Brazil (+55)
-                                                </div>
-                                                <div data-code="+34">
-                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
-                                                    Spain (+34)
-                                                </div>
-                                                <div data-code="+52">
-                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
-                                                    Mexico (+52)
-                                                </div>
-                                                <div data-code="+27">
-                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
-                                                    South Africa (+27)
-                                                </div>
-                                                <div data-code="+47">
-                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
-                                                    Norway (+47)
-                                                </div>
-                                                <div data-code="+65">
-                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
-                                                    Singapore (+65)
-                                                </div>
-                                                <div data-code="+82">
-                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
-                                                    South Korea (+82)
-                                                </div>
-                                                <div data-code="+31">
-                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
-                                                    Netherlands (+31)
-                                                </div>
-                                                <div data-code="+41">
-                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
-                                                    Switzerland (+41)
-                                                </div>
-                                                <div data-code="+46">
-                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
-                                                    Sweden (+46)
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border"
-                                            placeholder="Property type">
-                                    </div>
-                                    <div class="col-md-12 mb-2">
-                                        <textarea class="form-control input_border" rows="1"
-                                            placeholder="Description"></textarea>
-                                    </div>
-                                    <div class="col-md-12 mb-2 mt-2">
-                                        <button type="button"
-                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div class="container-fluid">
         <div class="property-card row">
             <!-- Property Image -->
             <div class="col-md-5">
-                <img id="main-image" src="asset/image/home_img1.jpg" alt="Property" class="property-image mb-3">
+                <img id="main-image" src="asset/image/home_img1.jpg" alt="Property" class="property-image mb-3" />
                 <div class="property-thumbnails d-flex justify-content-evenly">
-                    <img src="asset/image/home_img1.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img2.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img3.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img4.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img5.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img6.jpg" alt="Thumbnail">
-                    <img src="asset/image/home_img7.jpg" alt="Thumbnail">
+                    <img src="asset/image/home_img1.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img2.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img3.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img4.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img5.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img6.jpg" alt="Thumbnail" />
+                    <img src="asset/image/home_img7.jpg" alt="Thumbnail" />
                 </div>
             </div>
             <!-- Property Details -->
             <div class="col-md-7">
                 <div class="row">
-                    <!-- Left Section -->
-                    <div class="col-md-8">
-                        <div style="border-right: 1px solid #a19a9a;">
-                            <h5 class="fw-bold">Iconic Banglow</h5>
-                            <p class="mb-1">New luxury homes at Palm Jumeirah</p>
-                        </div>
-                        <p class="text-muted">Near Burj Al-Arab</p>
+                    <div class="col-md-12">
+                        <h4>AED 22,250,000</h4>
+                        <p class="text-muted">FIVE Palm Jumeirah, Palm Jumeirah, Dubai</p>
                     </div>
 
-                    <!-- Right Section -->
-                    <div class="col-md-4 text-md-end text-start">
-                        <h4>AED 3,215</h4>
-                        <p class="text-danger text-decoration-line-through">AED 3,856</p>
-                    </div>
                     <div class="col-md-12">
-                        <div class="d-flex justify-content-between align-items-center mt-2 features-item">
-                            <div class="me-4 d-flex align-items-center ">
-                                <img src="asset/image/bed_.png" alt="">&nbsp; 4 Beds
+                        <div style="border-right: 1px solid #a19a9a">
+                            <p class="mb-1">Near Burj Al-Arab</p>
+                        </div>
+                        <div class="mb-3" style="color: #4b6e93">
+                            <span class="fw-bold text-decoration-none">Private Pool</span> |
+                            <span class="fw-bold text-decoration-none">Stunning Sea View</span>
+                            |
+                            <span class="fw-bold text-decoration-none">Luxury Penthouse</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center mt-2 features-item">
+                            <div class="me-4 d-flex align-items-center">
+                                <img src="asset/image/BUA.svg" alt="" />&nbsp;
+                                BUA: 5,869 sq.ft
                             </div>
                             <div class="me-4 d-flex align-items-center">
-                                <img src="asset/image/bathroom_.png" alt="">&nbsp; 3 Bath
+                                <img src="asset/image/bed_.png" alt="" />&nbsp; 4 Beds
                             </div>
                             <div class="me-4 d-flex align-items-center">
+                                <img src="asset/image/bathroom_.png" alt="" />&nbsp; 3 Bath
+                            </div>
+
+                            <!-- <div class="me-4 d-flex align-items-center">
                                 <img src="asset/image/garden.png" alt="">&nbsp; 2 Garden
                             </div>
                             <div class="me-4 d-flex align-items-center">
@@ -430,39 +303,63 @@
                             </div>
                             <div class="me-4 d-flex align-items-center">
                                 <img src="asset/image/Garage.jpg" alt="">&nbsp; 2 Parking
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <!-- Features -->
                 <div class="property-features mt-3">
                     <h5 class="mb-4">Features</h5>
-                    <hr>
+                    <hr />
                     <ul>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Exquisite Architecture &
-                            Design</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Spacious Bedrooms &
-                            Bathrooms</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Home Automation & Smart
-                            Tech</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Luxury Amenities</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Private Spaces</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Panoramic Windows & Glass
-                            Walls</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Gourmet Kitchen</li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Outdoor Living Spaces</li>
-                        <li><span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Home Entertainment Systems
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span> 4
+                            Bed + Study
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Spacious Layout
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span> 3
+                            Full Bathrooms
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Upgraded
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Laundry Room
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Service Charge 14.01 AED/sq.ft
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Partially Furnished
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Contact today to arrange a viewing
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Owner Occupied
+                        </li>
+                        <li>
+                            <span><img src="asset/image/Check_Yellow.jpg" alt="" /></span>
+                            Premium Location & Views
+                        </li>
+                        <!-- <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
                         </li>
                         <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
                         </li>
                         <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
                         </li>
                         <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
-                        </li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
-                        </li>
-                        <li> <span><img src="asset/image/Check_Yellow.jpg" alt=""></span> Sustainability Features
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="line"></div>
                 </div>
@@ -471,181 +368,204 @@
         <div class="contact p-3">
             <h4>Contact Us</h4>
             <div class="contact_head mb-3"></div>
-            <p>Contact us today to explore exclusive luxury homes and find your perfect dream property.</p>
+            <p>
+                Contact us today to explore exclusive luxury homes and find your
+                perfect dream property.
+            </p>
 
             <div class="contact_form mt-4">
                 <div class="row">
                     <div class="col-md-2 mb-2 d-flex">
-                        <div><img src="asset/image/Avatar_Image.png" class="img-fluid rounded-circle p-1"
-                                alt="Kayley Hall" style="width: 40px;"></div>
+                        <div>
+                            <img src="asset/image/Avatar_Image.png" class="img-fluid rounded-circle p-1"
+                                alt="Kayley Hall" style="width: 40px" />
+                        </div>
                         <div>
                             <p class="m-0">Kayley Hall</p>
-                            <p style="font-size: 13px; color: #FFAC12;">View profile</p>
+                            <p style="font-size: 13px; color: #ffac12">View profile</p>
                         </div>
                     </div>
                     <div class="col-md-2 mb-2">
-                        <input type="email" class="form-control input_border" placeholder="Email">
+                        <input type="email" class="form-control input_border" placeholder="Email" />
                     </div>
                     <div class="col-md-2 mb-2">
                         <div class="phone-input-container">
                             <div class="dropdown" id="dropdown3">
-                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                 <span>+971</span>
                             </div>
-                            <input type="tel" id="phone3" placeholder="Phone">
+                            <input type="tel" id="phone3" placeholder="Phone" />
                             <div class="dropdown-list text-black" id="dropdown-list3">
                                 <div data-code="+971">
-                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE" />
                                     UAE (+971)
                                 </div>
                                 <div data-code="+91">
-                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
+                                    <img src="https://flagcdn.com/w40/in.png" alt="India" />
                                     India (+91)
                                 </div>
                                 <div data-code="+1">
-                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
+                                    <img src="https://flagcdn.com/w40/us.png" alt="USA" />
                                     USA (+1)
                                 </div>
                                 <div data-code="+44">
-                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
+                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK" />
                                     UK (+44)
                                 </div>
                                 <div data-code="+61">
-                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
+                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia" />
                                     Australia (+61)
                                 </div>
                                 <div data-code="+81">
-                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
+                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan" />
                                     Japan (+81)
                                 </div>
                                 <div data-code="+33">
-                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
+                                    <img src="https://flagcdn.com/w40/fr.png" alt="France" />
                                     France (+33)
                                 </div>
                                 <div data-code="+49">
-                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany" />
                                     Germany (+49)
                                 </div>
                                 <div data-code="+86">
-                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                                    <img src="https://flagcdn.com/w40/cn.png" alt="China" />
                                     China (+86)
                                 </div>
                                 <div data-code="+39">
-                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
+                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy" />
                                     Italy (+39)
                                 </div>
                                 <div data-code="+7">
-                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia" />
                                     Russia (+7)
                                 </div>
                                 <div data-code="+55">
-                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil" />
                                     Brazil (+55)
                                 </div>
                                 <div data-code="+34">
-                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
+                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain" />
                                     Spain (+34)
                                 </div>
                                 <div data-code="+52">
-                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
+                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico" />
                                     Mexico (+52)
                                 </div>
                                 <div data-code="+27">
-                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
+                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa" />
                                     South Africa (+27)
                                 </div>
                                 <div data-code="+47">
-                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
+                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway" />
                                     Norway (+47)
                                 </div>
                                 <div data-code="+65">
-                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" />
                                     Singapore (+65)
                                 </div>
                                 <div data-code="+82">
-                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
+                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea" />
                                     South Korea (+82)
                                 </div>
                                 <div data-code="+31">
-                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
+                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" />
                                     Netherlands (+31)
                                 </div>
                                 <div data-code="+41">
-                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
+                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" />
                                     Switzerland (+41)
                                 </div>
                                 <div data-code="+46">
-                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
+                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden" />
                                     Sweden (+46)
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="col-md-2 mb-2">
-                        <input type="email" class="form-control input_border" placeholder="Email">
+                        <input type="email" class="form-control input_border" placeholder="Email" />
                     </div>
                     <div class="col-md-2 mb-2">
                         <textarea class="form-control input_border" rows="1" placeholder="Description"></textarea>
                     </div>
                     <div class="col-md-2 mb-2">
-                        <button type="button" class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
+                        <button type="button" class="btn btn-warning rounded-5 px-4 py-2 float-end">
+                            Contact Us
+                        </button>
                     </div>
                 </div>
             </div>
-            <p class="text-danger"><strong>NOTE :</strong> Our team will connect with you within 2 hours. Thank you
-                for your patience and support</p>
+            <p class="text-danger">
+                <strong>NOTE :</strong> Our team will connect with you within 2 hours.
+                Thank you for your patience and support
+            </p>
         </div>
         <div class="discription p-3">
             <h4 class="text-black">Discription</h4>
-            <hr>
-            <p>Nestled in one of the most prestigious locations in the world, this Iconic Bungalow offers a
-                lifestyle of unparalleled luxury and comfort. Situated near the legendary Burj Al-Arab, at the heart
-                of the iconic Palm Jumeirah, this exceptional residence redefines opulence and exclusivity.
+            <hr />
+            <p>
+                Nestled in one of the most prestigious locations in the world, this
+                Iconic Bungalow offers a lifestyle of unparalleled luxury and comfort.
+                Situated near the legendary Burj Al-Arab, at the heart of the iconic
+                Palm Jumeirah, this exceptional residence redefines opulence and
+                exclusivity.
             </p>
-            <p>Boasting 4 spacious bedrooms, each designed with sophisticated style and attention to detail, this
-                home provides the perfect balance of privacy and tranquility. The 3 elegant bathrooms are equipped
-                with high-end fixtures and finishes, offering a spa-like experience in the comfort of your own home.
+            <p>
+                Boasting 4 spacious bedrooms, each designed with sophisticated style
+                and attention to detail, this home provides the perfect balance of
+                privacy and tranquility. The 3 elegant bathrooms are equipped with
+                high-end fixtures and finishes, offering a spa-like experience in the
+                comfort of your own home.
             </p>
-            <p>The state-of-the-art kitchen is a culinary masterpiece, featuring premium appliances and ample space
-                for gourmet cooking. A spacious living and dining area, with breathtaking views of the Palm
-                Jumeirah, provides a grand setting for both intimate gatherings and entertaining guests.
+            <p>
+                The state-of-the-art kitchen is a culinary masterpiece, featuring
+                premium appliances and ample space for gourmet cooking. A spacious
+                living and dining area, with breathtaking views of the Palm Jumeirah,
+                provides a grand setting for both intimate gatherings and entertaining
+                guests.
             </p>
-            <p>Step outside to discover 2 beautifully landscaped gardens, offering a serene environment for
-                relaxation or outdoor dining. With 2 private parking spaces, convenience and security are
-                guaranteed.
+            <p>
+                Step outside to discover 2 beautifully landscaped gardens, offering a
+                serene environment for relaxation or outdoor dining. With 2 private
+                parking spaces, convenience and security are guaranteed.
             </p>
-            <p>This luxurious bungalow is not just a home but a statement of elite living, offering an unrivaled
-                combination of location, comfort, and style. Located just moments from the finest shopping, dining,
-                and entertainment in Dubai, the Iconic Bungalow is the perfect residence for those who demand only
-                the best.</p>
+            <p>
+                This luxurious bungalow is not just a home but a statement of elite
+                living, offering an unrivaled combination of location, comfort, and
+                style. Located just moments from the finest shopping, dining, and
+                entertainment in Dubai, the Iconic Bungalow is the perfect residence
+                for those who demand only the best.
+            </p>
         </div>
         <div class="property p-3">
             <p class="checkout">CHECKOUT OUR NEW</p>
             <h2>Similar Properties</h2>
-            <p>Browse the newest similar properties for sale, offering a variety of options with detailed
-                descriptions, images, pricing, and location information.</p>
+            <p>
+                Browse the newest similar properties for sale, offering a variety of
+                options with detailed descriptions, images, pricing, and location
+                information.
+            </p>
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-12">
-
                     <div class="card border-0">
-
                         <div class="card-body">
-                            <div style="position: relative;">
-                                <img src="asset/image/property_image1.jpg" alt="Property" class="property-image mb-3">
+                            <div style="position: relative">
+                                <img src="asset/image/property_image1.jpg" alt="Property" class="property-image mb-3" />
                                 <button class="rounded-5 text-danger border-0 property_btn"
-                                    style="background-color: #FFE1E1;"><img src="asset/image/popular.png" alt="">
-                                    Popular</button>
+                                    style="background-color: #ffe1e1">
+                                    <img src="asset/image/popular.png" alt="" /> Popular
+                                </button>
                             </div>
                             <h5>AED 3,215</h5>
                             <h6 class="address_head">New luxury homes at Palm Jumeirah</h6>
                             <p class="address">Near Burj Al-Arab</p>
                             <div class="d-flex justify-content-between align-items-center mt-2">
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bed_.png" alt="">&nbsp; 4 Beds
+                                    <img src="asset/image/bed_.png" alt="" />&nbsp; 4 Beds
                                 </div>
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bathroom_.png" alt="">&nbsp; 3 Bath
+                                    <img src="asset/image/bathroom_.png" alt="" />&nbsp; 3 Bath
                                 </div>
                             </div>
                         </div>
@@ -654,21 +574,22 @@
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="card border-0">
                         <div class="card-body">
-                            <div style="position: relative;">
-                                <img src="asset/image/property_image2.jpg" alt="Property" class="property-image mb-3">
+                            <div style="position: relative">
+                                <img src="asset/image/property_image2.jpg" alt="Property" class="property-image mb-3" />
                                 <button class="rounded-5 text-primary border-0 property_btn"
-                                    style="background-color: #D7EEFF;"><img src="asset/image/home.png" alt=""> New
-                                    Listing</button>
+                                    style="background-color: #d7eeff">
+                                    <img src="asset/image/home.png" alt="" /> New Listing
+                                </button>
                             </div>
                             <h5>AED 3,215</h5>
                             <h6 class="address_head">Ultra-luxury house in Dubai</h6>
                             <p class="address">Near Dubai Mall Bussiness Way</p>
                             <div class="d-flex justify-content-between align-items-center mt-2">
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bed_.png" alt="">&nbsp; 4 Beds
+                                    <img src="asset/image/bed_.png" alt="" />&nbsp; 4 Beds
                                 </div>
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bathroom_.png" alt="">&nbsp; 3 Bath
+                                    <img src="asset/image/bathroom_.png" alt="" />&nbsp; 3 Bath
                                 </div>
                             </div>
                         </div>
@@ -677,22 +598,23 @@
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="card border-0">
                         <div class="card-body">
-                            <div style="position: relative;">
-                                <img src="asset/image/property_image3.jpg" alt="Property" class="property-image mb-3">
+                            <div style="position: relative">
+                                <img src="asset/image/property_image3.jpg" alt="Property" class="property-image mb-3" />
                                 <button class="rounded-5 text-success border-0 property_btn"
-                                    style="background-color: #F1FFF1;"><img src="asset/image/Vector.png"
-                                        alt="Discounted Price"> Discounted
-                                    Price</button>
+                                    style="background-color: #f1fff1">
+                                    <img src="asset/image/Vector.png" alt="Discounted Price" />
+                                    Discounted Price
+                                </button>
                             </div>
                             <h5>AED 3,215</h5>
                             <h6 class="address_head">Freezone Banglow</h6>
                             <p class="address">Dubai Airport Near Al- Twar Centre</p>
                             <div class="d-flex justify-content-between align-items-center mt-2">
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bed_.png" alt="">&nbsp; 4 Beds
+                                    <img src="asset/image/bed_.png" alt="" />&nbsp; 4 Beds
                                 </div>
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bathroom_.png" alt="">&nbsp; 3 Bath
+                                    <img src="asset/image/bathroom_.png" alt="" />&nbsp; 3 Bath
                                 </div>
                             </div>
                         </div>
@@ -701,21 +623,22 @@
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="card border-0">
                         <div class="card-body">
-                            <div style="position: relative;">
-                                <img src="asset/image/property_image4.jpg" alt="Property" class="property-image mb-3">
+                            <div style="position: relative">
+                                <img src="asset/image/property_image4.jpg" alt="Property" class="property-image mb-3" />
                                 <button class="rounded-5 text-danger border-0 property_btn"
-                                    style="background-color: #FFE1E1;"><img src="asset/image/popular.png" alt="">
-                                    Popular</button>
+                                    style="background-color: #ffe1e1">
+                                    <img src="asset/image/popular.png" alt="" /> Popular
+                                </button>
                             </div>
                             <h5>AED 3,215</h5>
                             <h6 class="address_head">26A Street Mankool Area Bur Dubai</h6>
                             <p class="address">26A Street Mankool Area Bur Dubai</p>
                             <div class="d-flex justify-content-between align-items-center mt-2">
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bed_.png" alt="">&nbsp; 4 Beds
+                                    <img src="asset/image/bed_.png" alt="" />&nbsp; 4 Beds
                                 </div>
                                 <div class="me-4 d-flex align-items-center text-nowrap">
-                                    <img src="asset/image/bathroom_.png" alt="">&nbsp; 3 Bath
+                                    <img src="asset/image/bathroom_.png" alt="" />&nbsp; 3 Bath
                                 </div>
                             </div>
                         </div>
@@ -725,118 +648,266 @@
         </div>
         <div class="testimonial p-3 mt-5 mb-5">
             <h3 class="text-center">Testimonials</h3>
-            <p class="text-center">See what our property managers, landlords, and <br> tenants have to say</p>
+            <p class="text-center">
+                See what our property managers, landlords, and <br />
+                tenants have to say
+            </p>
             <div class="a">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Abhishek</h6>
             </div>
             <div class="b">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Hitesh</h6>
             </div>
             <div class="c">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
-                    agency,
-                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
-                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <p class="text-center container mt-5 mb-3">
+                    Experience the excellence of Dubai's top-rated real estate agency,
+                    renowned for delivering high-end properties, expert market insights,
+                    and tailored solutions. We specialize in luxury estates and premium
+                    investment opportunities across Dubai
+                </p>
                 <h6 class="text-center mb-3">Pawas Goyal</h6>
             </div>
 
             <div class="d-flex justify-content-center">
                 <div class="image-container" id="image1">
-                    <img src="asset/image/testimonial1.jpg" alt="Amara Sheikh">
+                    <img src="asset/image/testimonial1.jpg" alt="Amara Sheikh" />
                     <div class="rotating-border"></div>
                 </div>
                 <div class="image-container" id="image2">
-                    <img src="asset/image/testimonial2.jpg" alt="">
+                    <img src="asset/image/testimonial2.jpg" alt="" />
                     <div class="rotating-border"></div>
                 </div>
                 <div class="image-container" id="image3">
-                    <img src="asset/image/testimonial3.jpg" alt="">
+                    <img src="asset/image/testimonial3.jpg" alt="" />
                     <div class="rotating-border"></div>
                 </div>
             </div>
         </div>
-
-
     </div>
-    <footer class="text-white py-4">
-        <div class="container">
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: none">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyModalLabel" style="color: #2b5379">
+                                Find your Property Value
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-header">
+                                    <label class="applylable mb-2 text-black"><input type="radio" name="details"
+                                            class="text-black" checked />
+                                        Owner Details</label>
+                                    <label class="applylable mb-2 text-black"><input type="radio" name="details"
+                                            class="text-black" />
+                                        Unit Details</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Name*</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Mobile No.*</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+91</span>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Service Required*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Property Valuation</option>
+                                        <option>Market Price Analysis</option>
+                                        <option>Property Selling Assistance</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailsModal" data-bs-dismiss="modal">
+                                    Next
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dusra Modal (Property Details) -->
+    <div class="modal fade" id="propertyDetailsModal" tabindex="-1" aria-labelledby="propertyDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: none">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyDetailsModalLabel" style="color: #2b5379">
+                                Find your Property Value
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <div class="form-header d-flex justify-content-lg-between">
+                                        <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                                name="details" class="text-black" checked />
+                                            Owner Details</label>
+                                        <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                                name="details" class="text-black" />
+                                            Unit Details</label>
+                                    </div>
+                                    <label class="form-label applylable text-black">Location*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the location" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Unit No*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the Unit Number" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Status</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" checked />
+                                        <label class="form-check-label applylable text-black">Ready</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" />
+                                        <label class="form-check-label applylable text-black">Off plan</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Property Type*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Apartment</option>
+                                        <option>Villa</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white footer">
+        <div class="container py-4">
             <div class="row">
                 <!-- Logo and Address Section -->
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="asset/image/logo_sandrock.jpg" alt="Sand & Rock Logo" class="w-50 me-2">
-
+                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo" />
                     </div>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai UAE
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street
+                        Building,Near Burjuman Mall,Dubai UAE
                     </p>
                     <p><i class="fas fa-phone-alt me-2"></i> +971-585505899</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@sandandrockrealesate.com</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> info@sandandrockrealesate.com
+                    </p>
                 </div>
 
                 <!-- Quick Links Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold">QUICK LINKS</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">QUICK LINKS</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-secondary text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Project</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Contact</a></li>
+                        <li>
+                            <a href="index.html" class="text-white text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-white text-decoration-none">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Project</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Contact</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Legal Links Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold">LEGAL LINKS</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">LEGAL LINKS</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-secondary text-decoration-none">Terms</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Conditions</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Policy</a></li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Terms</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Policy</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Social Media Section -->
                 <div class="col-md-2 mt-3 mb-3">
-                    <h6 class="fw-bold">SOCIAL MEDIA</h6>
+                    <h6 class="fw-bold" style="color: #2b5379">SOCIAL MEDIA</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-secondary text-decoration-none">Facebook</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Twitter</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">YouTube</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">LinkedIn</a></li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">LinkedIn</a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <!-- Copyright Section -->
-            <div class="text-center mt-3">
-                <small>Copyright &copy; 2024 Sand&rocks</small>
-            </div>
+        </div>
+        <div class="text-center mt-3 p-2" style="background-color: #2b5379">
+            <small>Copyright &copy; 2024 Sand&rocks</small>
         </div>
     </footer>
 </body>
 <script src="asset/js/bootstrap.bundle.min.js"></script>
 <script>
     // Select the main image element
-    const mainImage = document.getElementById('main-image');
+    const mainImage = document.getElementById("main-image");
 
     // Select all thumbnail images
-    const thumbnails = document.querySelectorAll('.property-thumbnails img');
+    const thumbnails = document.querySelectorAll(".property-thumbnails img");
 
     // Add click event listeners to each thumbnail
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function () {
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
             // Set the src of the main image to the clicked thumbnail's src
             mainImage.src = this.src;
         });
     });
-
 
     function initializeDropdown(dropdownId, listId) {
         const dropdown = document.getElementById(dropdownId);
@@ -872,20 +943,18 @@
     initializeDropdown("dropdown1", "dropdown-list1");
     initializeDropdown("dropdown2", "dropdown-list2");
     initializeDropdown("dropdown3", "dropdown-list3");
-
-
 </script>
 <script>
     // Select all image containers and heading elements
-    const imageContainers = document.querySelectorAll('.image-container');
+    const imageContainers = document.querySelectorAll(".image-container");
     const headings = {
-        a: document.querySelector('.a'),
-        b: document.querySelector('.b'),
-        c: document.querySelector('.c')
+        a: document.querySelector(".a"),
+        b: document.querySelector(".b"),
+        c: document.querySelector(".c"),
     };
 
     // Mapping index to class names
-    const classes = ['a', 'b', 'c'];
+    const classes = ["a", "b", "c"];
 
     let currentIndex = 0;
 
@@ -893,24 +962,24 @@
     function toggleHeading(index) {
         // Hide all headings
         Object.keys(headings).forEach((key) => {
-            headings[key].style.display = 'none';
+            headings[key].style.display = "none";
         });
         // Show current heading
-        headings[classes[index]].style.display = 'block';
+        headings[classes[index]].style.display = "block";
     }
 
     // Function to run animation on current image
     function runAnimation() {
         // Remove active animation from all images
         imageContainers.forEach((container) => {
-            const border = container.querySelector('.rotating-border');
-            border.style.display = 'none';
+            const border = container.querySelector(".rotating-border");
+            border.style.display = "none";
         });
 
         // Show animation on the current image
         const currentContainer = imageContainers[currentIndex];
-        const border = currentContainer.querySelector('.rotating-border');
-        border.style.display = 'block';
+        const border = currentContainer.querySelector(".rotating-border");
+        border.style.display = "block";
 
         // Update heading
         toggleHeading(currentIndex);
@@ -924,7 +993,10 @@
 
     // Start the animation sequence
     runAnimation();
-
 </script>
-
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+        alert('Form submitted successfully!');
+    });
+</script>
 </html>

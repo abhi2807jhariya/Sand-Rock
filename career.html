@@ -14,6 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 
+
 </head>
 <style>
     .modal-dialog {
@@ -25,6 +26,11 @@
     .modal-content {
         background: url('asset/image/model_back.jpg') no-repeat center center / cover;
         color: white;
+    }
+
+    .modal-content1 {
+
+        color: rgb(0, 0, 0);
     }
 
     /* Common styles */
@@ -76,11 +82,30 @@
         align-items: center;
         justify-content: center;
     }
+
+    .step-box {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background: #fff;
+    }
+
+    .step-box h6 {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .step-box img {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 </style>
+
 
 <body>
     <nav>
-        <a href="index.html"><img src="asset/image/SandRock.svg" alt="logo"></a>
+        <a href="index.html"><img src="asset/image/SandRock.svg" class="w-100" alt="logo"></a>
         <label for="toggler">
             <i class="fa fa-bars text-black"></i>
         </label>
@@ -88,17 +113,19 @@
         <div class="menu">
             <ul class="list">
                 <li class="list_item"><a href="about.html">About</a></li>
-                <li class="list_item"><a href="">Buy</a></li>
-                <li class="list_item"><a href="">Rent</a></li>
-                <li class="list_item"><a href="sell.html">Sell</a></li>                <li class="list_item"><a href="career.html">Career</a></li>
-                <li class="list_item" data-bs-toggle="modal" data-bs-target="#selModel">Contact Us</li>
-                <li class="list_item btn-list-property">
-                    <a href="#" class="text-white">List your Property</a>
+                <li class="list_item"><a href="buy.html">Buy</a></li>
+                <li class="list_item"><a href="rent.html">Rent</a></li>
+                <li class="list_item"><a href="sell.html">Sell</a></li>
+                <li class="list_item"><a href="career.html">Career</a></li>
+                <li class="list_item" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</li>
+                <li class="list_item btn-list-property text-white  p-2  text-center cursor-pointer"
+                    data-bs-toggle="modal" data-bs-target="#propertyModal">
+                    List your Property
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="modal fade" id="selModel" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -120,7 +147,8 @@
                             <div class="container">
                                 <h1 class="text-black">Contact us</h1>
                                 <div class="contact_head mb-3"></div>
-                                <p class="text-black" style="font-size: 13px;">Contact us today to explore exclusive luxury homes and find
+                                <p class="text-black" style="font-size: 13px;">Contact us today to explore exclusive
+                                    luxury homes and find
                                     your
                                     perfect dream property.</p>
                                 <div class="row">
@@ -236,7 +264,7 @@
                                     </div>
                                     <div class="col-md-12 mb-2 mt-2">
                                         <button type="button"
-                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
+                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Contact Us</button>
                                     </div>
                                 </div>
                             </div>
@@ -247,150 +275,48 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="applybtn" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="asset/image/sandrocklogo.svg" alt="" class="w-50 mb-5">
-
-                            <div class="container">
-                                <p><i class="fa fa-location-dot"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai
-                                    UAE</p>
-                                <p><i class="fa fa-phone"></i> +971-585505899</p>
-                                <p><i class="fa-solid fa-envelope"></i> info@sandandrockrealesate.com</p>
+            <div class="modal-content border-0" style="background-image: none;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white;">
+                        <div class="modal-header border-0 mb-3">
+                            <h5 class="modal-title fw-bold" id="applyModalLabel" style="color: #4B6E93;">Apply Now</h5>
+                            <button type="button" class="btn-close" onclick="closeApplyModel()"
+                                style="color: #4B6E93;"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="name" class="applylable text-black mb-2">Name*</label>
+                                <input type="text" class="form-control" placeholder="Enter your name" id="name"
+                                    required="">
                             </div>
-                            <hr>
-                            <p class="border-warning text-center">Copyright &copy; 2024 Sand&rocks</p>
+
+                            <div class="mb-3">
+                                <label class="applylable text-black mb-2">Email Address*</label>
+                                <input type="email" class="form-control" placeholder="Enter mail" required="">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="applylable text-black mb-2">Contact No.*</label>
+                                <input type="text" class="form-control" placeholder="Enter Contact No" required="">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="applylable text-black mb-2">Cover Letter</label>
+                                <textarea class="form-control" rows="3" placeholder="Write your letter here"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="applylable text-black mb-2">Upload your CV (PDF/doc)*</label>
+                                <input type="file" class="form-control" accept=".pdf, .doc, .docx" required="">
+                                <small class="text-muted">Files allowed: PDF, doc, docx and Maximum file size:
+                                    2Mb</small>
+                            </div>
+
+                            <button type="submit" class="btn w-100 mt-2" style="background-color: #4B6E93; color: white;">Submit</button>
 
                         </div>
-                        <div class="col-md-6">
-                            <div class="container">
-                                <h1 class="text-black">Contact us for Sell property</h1>
-                                <div class="contact_head mb-3"></div>
-                                <p class="text-black" style="font-size: 13px;">Contact us today to explore exclusive luxury homes and find
-                                    your
-                                    perfect dream property.</p>
-                                <div class="row">
-                                    <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border" placeholder="Name">
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <input type="email" class="form-control input_border" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <div class="phone-input-container">
-                                            <div class="dropdown" id="dropdown2">
-                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
-                                                <span>+971</span>
-                                            </div>
-                                            <input type="tel" id="phone2" placeholder="Phone">
-                                            <div class="dropdown-list text-black" id="dropdown-list2">
-                                                <div data-code="+971">
-                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
-                                                    UAE (+971)
-                                                </div>
-                                                <div data-code="+91">
-                                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
-                                                    India (+91)
-                                                </div>
-                                                <div data-code="+1">
-                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
-                                                    USA (+1)
-                                                </div>
-                                                <div data-code="+44">
-                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
-                                                    UK (+44)
-                                                </div>
-                                                <div data-code="+61">
-                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
-                                                    Australia (+61)
-                                                </div>
-                                                <div data-code="+81">
-                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
-                                                    Japan (+81)
-                                                </div>
-                                                <div data-code="+33">
-                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
-                                                    France (+33)
-                                                </div>
-                                                <div data-code="+49">
-                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
-                                                    Germany (+49)
-                                                </div>
-                                                <div data-code="+86">
-                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
-                                                    China (+86)
-                                                </div>
-                                                <div data-code="+39">
-                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
-                                                    Italy (+39)
-                                                </div>
-                                                <div data-code="+7">
-                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
-                                                    Russia (+7)
-                                                </div>
-                                                <div data-code="+55">
-                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
-                                                    Brazil (+55)
-                                                </div>
-                                                <div data-code="+34">
-                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
-                                                    Spain (+34)
-                                                </div>
-                                                <div data-code="+52">
-                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
-                                                    Mexico (+52)
-                                                </div>
-                                                <div data-code="+27">
-                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
-                                                    South Africa (+27)
-                                                </div>
-                                                <div data-code="+47">
-                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
-                                                    Norway (+47)
-                                                </div>
-                                                <div data-code="+65">
-                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
-                                                    Singapore (+65)
-                                                </div>
-                                                <div data-code="+82">
-                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
-                                                    South Korea (+82)
-                                                </div>
-                                                <div data-code="+31">
-                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
-                                                    Netherlands (+31)
-                                                </div>
-                                                <div data-code="+41">
-                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
-                                                    Switzerland (+41)
-                                                </div>
-                                                <div data-code="+46">
-                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
-                                                    Sweden (+46)
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <input type="text" class="form-control input_border"
-                                            placeholder="Property type">
-                                    </div>
-                                    <div class="col-md-12 mb-2">
-                                        <textarea class="form-control input_border" rows="1"
-                                            placeholder="Description"></textarea>
-                                    </div>
-                                    <div class="col-md-12 mb-2 mt-2">
-                                        <button type="button"
-                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -400,35 +326,111 @@
         <div class="position-relative" style="font-family: Plus Jakarta sans-serif;">
             <img src="asset/image/career.svg" alt="" class="img-fluid w-100">
             <div class="position-absolute top-50 start-50 translate-middle w-75">
-                <h1 class="text-white display-4 about">Join Our Team of Real Estate Professionals</h1>
-                <p class="text-white para fw-bolder">Unlock <span class="text-warning">growth opportunities</span>
+                <h2 class="text-white display-4 about careerh2">Join Our Team of Real Estate Professionals</h2>
+                <p class="text-white para fw-bolder careerp">Unlock <span class="text-warning">growth
+                        opportunities</span>
                     ,Unlock growth opportunities, flexible work, high commissions, and expert training.
                 </p>
-                <button class="btn btn-warning rounded-2">Apply Now</button>
+                <button class="btn btn-warning rounded-2 mt-2" data-bs-toggle="modal" data-bs-target="#applybtn"
+                    style="color: white;">Apply
+                    Now</button>
+
             </div>
         </div>
+
+
     </div>
+
 
     <div class="container-fluid">
         <div class="container mt-5">
-            <p class="text-primary">Why join us</p>
+            <p class="text-primary">Why join us ?</p>
             <div class="row">
+                <div class="col-md-6">
+                    <h2>Build Your Future in Real Estate with Sand&rocks</h2>
+                    <p>joining a dynamic team where you gain expert training, high commissions, and career growth
+                        opportunities while working flexibly with premium property listings and strong market support.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-5">
+                            <div class="card m-1 h-100 d-flex flex-column">
+                                <img src="asset/image/joinimg1.svg" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Growth Opportunities </h5>
+                                    <p class="card-text">Career advancement with mentorship.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <div class="card m-1 h-100 d-flex flex-column">
+                                <img src="asset/image/joinimg2.svg" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Good Commission Structure</h5>
+                                    <p class="card-text">Earn higher commissions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card m-1 h-100 d-flex flex-column">
+                        <img src="asset/image/joinimg3.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Training Programs</h5>
+                            <p class="card-text">Free onboarding & skill development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card m-1 h-100 d-flex flex-column">
+                        <img src="asset/image/joinimg4.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Flexible Work Environment </h5>
+                            <p class="card-text">Work independently while we handle the backend support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card m-1 h-100 d-flex flex-column">
+                        <img src="asset/image/joinimg5.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Marketing & Sales Support</h5>
+                            <p class="card-text">Get professional property photography, virtual tours, and priority
+                                listings on top platforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card m-1 h-100 d-flex flex-column">
+                        <img src="asset/image/joinimg6.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mt-auto">Exclusive Property Listings</h5>
+                            <p class="card-text mt-auto">Access premium properties before they hit the market and get an
+                                edge in the industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row">
                 <div class="col-md-5">
                     <h2>Why you Should Join us</h2>
                     <p>Join us for growth opportunities, a competitive commission structure, expert training, and a
                         flexible work environment. Work independently while we handle the backend support, helping you
                         succeed in real estate!</p>
                     <div class="row">
-                        <div class="col-md-6 d-flex flex-column align-items-center">
-                            <img src="asset/image/guide_image.png" alt="Image 1" class="rounded-3 mb-3"
-                                style="width: 80%;">
-                            <img src="asset/image/guide_image2.png" alt="Image 2" class="rounded-3" style="width: 80%;">
-                        </div>
-
                         <div class="col-md-6 d-flex justify-content-center">
                             <img src="asset/image/guide_image3.png" alt="Image 2" class="rounded-3 mt-5"
                                 style="width: 80%;">
                         </div>
+                        <div class="col-md-6 d-flex flex-column align-items-center" style="margin-left: -79px;">
+                            <img src="asset/image/guide_image.png" alt="Image 1" class="rounded-3" style="width: 80%;">
+                            <img src="asset/image/guide_image2.png" alt="Image 2" class="rounded-3" style="width: 80%;">
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -479,52 +481,128 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="container py-5 testimonial">
+        <h6 class="text-primary mb-4">How It Works</h6>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="imagehow" src="asset/image/ApplyandConnect.png" alt="Apply & Connect"
+                    style="width: 110%;  ">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div style="padding: 50px; margin-left: 40px;">
+                    <h6 style="color: #2B5379;">Apply & Connect</h6>
+                    <p style="width: 100%; margin-top: 16px; font-style: Plus Jakarta Sans;">Fill out our application
+                        form, and we'll schedule a call to discuss your goals and how we can
+                        support you.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div style="padding: 50px; margin-left: 40px;">
+                    <h6 style="color: #2B5379;">Onboarding & Training</h6>
+                    <p style="width: 100%; margin-top: 16px; font-style: Plus Jakarta Sans;">Get access to our
+                        comprehensive onboarding program, including training on market trends, sales
+                        techniques, and our advanced tools.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="imagehow" src="asset/image/onboarding.png" alt="Onboarding & Training" style="width: 100%;">
+            </div>
+
+            <div class="col-md-6">
+                <img class="imagehow" src="asset/image/list.png" alt="List & Market" style="width: 110%;  ">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div style="padding: 50px; margin-left: 40px;">
+                    <h6 style="color: #2B5379;">List & Market</h6>
+                    <p style="width: 100%; margin-top: 16px; font-style: Plus Jakarta Sans;">Start listing properties
+                        with our professional photography, virtual tours, and guaranteed top
+                        spots on leading property portals.</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 d-flex align-items-center">
+                <div style="padding: 50px; margin-left: 40px;">
+                    <h6 style="color: #2B5379;">Close Deals & Earn </h6>
+                    <p style="width: 100%; margin-top: 16px; font-style: Plus Jakarta Sans;">Leverage our global network
+                        and local expertise to close deals faster and earn Good commission. </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="imagehow" src="asset/image/closedeal.png" alt="List & Market" style="width: 100%;">
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+
+
+
+
+    <div class="container-fluid " style="background: linear-gradient(to bottom, #FFFFFF,#51769E); ">
         <div class="container my-5">
-            <h6 class="text-primary fw-semibold">How It Works</h6>
-            <h2 class="fw-bold">Joining Our Team</h2>
-            <p class="text-muted">Explore exciting career opportunities with us! Join as a Real Estate Agent, Sales Executive, Marketing Specialist, or Admin Support and accelerate your career in the real estate industry.</p>
-        
+
+            <div style="margin-top: 20px;">
+                <h6 style="color: #4361EE;">Joining Our Team</h6>
+                <p class="">Explore exciting career opportunities with us! Join as a Real Estate Agent, Sales Executive,
+                    Marketing Specialist, or Admin Support and accelerate your career in the real estate industry.</p>
+
+            </div>
             <div class="row mt-4">
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center p-3 bg-light">
-                        <div class="fs-1 text-primary"><i class="bi bi-person-badge"></i></div>
-                        <h5 class="text-primary fw-bold mt-2">Real Estate Agent</h5>
-                        <p class="text-muted">Help clients buy, sell, and rent properties while providing expert market insights and negotiations.</p>
-                        <button class="btn view_all align-self-center">Apply Now</button>
+                <div class="col-md-3 mb-5">
+                    <div class="card border-0 shadow-sm text-center p-3 bg-light h-100 d-flex flex-column">
+                        <!-- <div class="fs-1 text-primary"><i class="bi bi-person-badge"></i></div> -->
+                        <img class="maskgroup" src="asset/image/Mask group1.png" alt="">
+
+                        <h5 class="text-primary mt-auto" style="font-style: Plus Jakarta Sans;
+                        font-weight: 500;
+                        ">Real Estate Agent</h5>
+                        <p style="font-style: Plus Jakarta Sans;" class="">Help clients buy, sell, and rent properties
+                            while providing expert market insights and negotiations.</p>
+                        <button class="btn view_all align-self-center mt-auto">Apply Now</button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center p-3 bg-light">
+                <div class="col-md-3 mb-5">
+                    <div class="card border-0 shadow-sm text-center p-3 bg-light h-100 d-flex flex-column">
                         <div class="fs-1 text-primary"><i class="bi bi-briefcase-fill"></i></div>
-                        <h5 class="text-primary fw-bold mt-2">Sales Executive</h5>
-                        <p class="text-muted">Drive revenue by building client relationships, pitching services, and closing deals with strategic sales techniques.</p>
-                        <button class="btn view_all align-self-center">Apply Now</button>
+                        <img class="maskgroup" src="asset/image/Mask group2.png" alt=""></img>
+                        <h5 class="text-primary mt-auto" style="font-style: Plus Jakarta Sans;
+                        font-weight: 500;
+                        ">Sales Executive</h5>
+                        <p class="">Drive revenue by building client relationships, pitching services, and closing deals
+                            with strategic sales techniques.</p>
+                        <button class="btn view_all align-self-center mt-auto">Apply Now</button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center p-3 bg-light">
+                <div class="col-md-3  mb-5">
+                    <div class="card border-0 shadow-sm text-center p-3 bg-light h-100 d-flex flex-column">
                         <div class="fs-1 text-primary"><i class="bi bi-gear-wide-connected"></i></div>
-                        <h5 class="text-primary fw-bold mt-2">Marketing Specialist</h5>
-                        <p class="text-muted">Develop campaigns, manage digital marketing, and enhance brand visibility to attract potential buyers and investors.</p>
-                        <button class="btn view_all btn-sm align-self-center">Apply Now</button>
+                        <img class="maskgroup" src="asset/image/Mask group3.png" alt=""></img>
+                        <h5 class="text-primary mt-auto" style="font-style: Plus Jakarta Sans;
+                        font-weight: 500;
+                        ">Marketing Specialist</h5>
+                        <p class="">Develop campaigns, manage digital marketing, and enhance brand visibility to attract
+                            potential buyers and investors.</p>
+                        <button class="btn view_all btn-sm align-self-center mt-auto">Apply Now</button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center p-3 bg-light">
+                <div class="col-md-3  mb-5">
+                    <div class="card border-0 shadow-sm text-center p-3 bg-light h-100 d-flex flex-column">
                         <div class="fs-1 text-primary"><i class="bi bi-clipboard-check"></i></div>
-                        <h5 class="text-primary fw-bold mt-2">Admin Support</h5>
-                        <p class="text-muted">Handle documentation, schedule meetings, and assist teams with daily operations for seamless workflow.</p>
-                        <button class="btn view_all btn-sm align-self-center">Apply Now</button>
+                        <img class="maskgroup" src="asset/image/Mask group4.png" alt=""></img>
+                        <h5 class="text-primary mt-auto" style="font-style: Plus Jakarta Sans;
+                        font-weight: 500;
+                        ">Admin Support</h5>
+                        <p class="">Handle documentation, schedule meetings, and assist teams with daily operations for
+                            seamless workflow.</p>
+                        <button class="btn view_all btn-sm align-self-center mt-auto">Apply Now</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="container mt-5">
 
             <h2>Expert guidance to help you find the right <span class="text-primary">real estate</span>.</h2>
@@ -567,13 +645,13 @@
             </div>
 
             <div class="d-flex justify-content-start">
-                <!-- Item 1 -->
+           
                 <div class="me-4 text-center">
                     <img src="asset/image/rent_Icon.jpg" alt="Icon 1" style="width: 50px;" class="mb-2">
                     <h6 class="fw-bold mb-1 text-primary">50k+ renters</h6>
                     <p class="text-muted small mb-0">believe in our service</p>
                 </div>
-                <!-- Item 2 -->
+              
                 <div class="text-center">
                     <img src="asset/image/rent_Icon2.jpg" alt="Icon 2" style="width: 50px;" class="mb-2">
                     <h6 class="fw-bold mb-1 text-primary">10k+ properties</h6>
@@ -582,27 +660,32 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
     <div class="container-fluid">
         <div class="testimonial p-3 mt-5 mb-5">
             <h3 class="text-center">Testimonials</h3>
-            <p class="text-center">See what our property managers, landlords, and <br> tenants have to say</p>
+            <p class="text-center"
+                style="color:  #000929; opacity: 70%; font-style: Plus Jakarta Sans; line-height: 25.6px; ">See what our
+                property managers, landlords, and <br> tenants have to say</p>
             <div class="a">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                <p class="text-center container mt-5 mb-3" style="font-style: Plus Jakarta Sans; width: 60%;">Experience
+                    the excellence of Dubai's top-rated real estate
                     agency,
                     renowned for delivering high-end properties, expert market insights, and tailored solutions. We
                     specialize in luxury estates and premium investment opportunities across Dubai</p>
                 <h6 class="text-center mb-3">Abhishek</h6>
             </div>
             <div class="b">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                <p class="text-center container mt-5 mb-3" style="font-style: Plus Jakarta Sans; width: 60%;">Experience
+                    the excellence of Dubai's top-rated real estate
                     agency,
                     renowned for delivering high-end properties, expert market insights, and tailored solutions. We
                     specialize in luxury estates and premium investment opportunities across Dubai</p>
                 <h6 class="text-center mb-3">Hitesh</h6>
             </div>
             <div class="c">
-                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                <p class="text-center container mt-5 mb-3" style="font-style: Plus Jakarta Sans; width: 60%;">Experience
+                    the excellence of Dubai's top-rated real estate
                     agency,
                     renowned for delivering high-end properties, expert market insights, and tailored solutions. We
                     specialize in luxury estates and premium investment opportunities across Dubai</p>
@@ -625,13 +708,210 @@
             </div>
         </div>
     </div>
-    <footer class="text-white">
+
+    <!-- <div id="propertyModal1" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden" style="margin-top: 85px;">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative" style="height: 70vh;
+    overflow-y: scroll;">
+          
+            <div class="bg-white p-3 rounded-3">
+                        
+                
+                <div class="modal-header border-0 mb-3">
+                    <h5 class="modal-title fw-bold" id="applyModalLabel" style="color: #4B6E93;">Apply Now</h5>
+                    <button type="button" class="btn-close" onclick="closeModal()" style="color: #4B6E93;"></button>
+                </div>
+      
+                
+                <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="name" class="applylable text-black mb-2">Name*</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" id="name" required="">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label class="applylable text-black mb-2">Email Address*</label>
+                            <input type="email" class="form-control" placeholder="Enter mail" required="">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label class="applylable text-black mb-2">Contact No.*</label>
+                            <input type="text" class="form-control" placeholder="Enter Contact No" required="">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label class="applylable text-black mb-2">Cover Letter</label>
+                            <textarea class="form-control" rows="3" placeholder="Write your letter here"></textarea>
+                        </div>
+    
+                        <div class="mb-3">
+                            <label class="applylable text-black mb-2">Upload your CV (PDF/doc)*</label>
+                            <input type="file" class="form-control" accept=".pdf, .doc, .docx" required="">
+                            <small class="text-muted">Files allowed: PDF, doc, docx and Maximum file size: 2Mb</small>
+                        </div>
+    
+                        <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+                   
+                </div>
+    
+            </div>
+        </div>
+    </div> -->
+
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content" style="background-image: none;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyModalLabel" style="color: #2B5379;">Find your Property
+                                Value</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-header d-flex justify-content-lg-between">
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" checked> Owner Details</label>
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black"> Unit Details</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Name*</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Mobile No.*</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+91</span>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Service Required*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Property Valuation</option>
+                                        <option>Market Price Analysis</option>
+                                        <option>Property Selling Assistance</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary w-25 float-end mb-3" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailsModal" data-bs-dismiss="modal"
+                                    style="background-color: #2B5379;">Next</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dusra Modal (Property Details) -->
+    <div class="modal fade" id="propertyDetailsModal" tabindex="-1" aria-labelledby="propertyDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: none;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 rounded-2" style="background-color: white;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyDetailsModalLabel" style="color: #2B5379;">Find your
+                                Property Value</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-header d-flex justify-content-lg-between">
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black" checked> Owner Details</label>
+                                    <label class="applylable text-black mb-2 text-black"><input type="radio"
+                                            name="details" class="text-black"> Unit Details</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Location*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the location">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Unit No*</label>
+                                    <input type="text" class="form-control" placeholder="Enter the Unit Number">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Status</label>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" checked>
+                                            <label
+                                                class="form-check-label applylable text-black text-black">Ready</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status">
+                                            <label class="form-check-label applylable text-black text-black">Off
+                                                plan</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black text-black">Property Type*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>Apartment</option>
+                                        <option>Villa</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Number of Bedrooms</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Number of Bathrooms</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-labe applylable text-black">Unit Size (sq ft or sq
+                                        meter)*</label>
+                                    <select class="form-select">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label applylable text-black">Upload Title Deed/Quood</label>
+                                    <input type="file" class="form-control">
+                                    <div class="form-text">Files allowed: PDF, JPG, PNG and Maximum file size: 5MB</div>
+                                </div>
+                                <button type="submit" class="btn text-white w-100"
+                                    style="background-color: #2B5379;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-white footer">
         <div class="container py-4">
             <div class="row">
                 <!-- Logo and Address Section -->
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo" class="w-50 me-2">
+                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo">
 
                     </div>
                     <p><i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai UAE
@@ -644,8 +924,8 @@
                 <div class="col-md-2 mt-3 mb-3">
                     <h6 class="fw-bold" style="color: #2B5379;">QUICK LINKS</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Project</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
@@ -785,6 +1065,23 @@
     // Start the animation sequence
     runAnimation();
 
+
+    //   apply form js start
+    function openModal() {
+        document.getElementById("propertyModal").classList.remove("hidden");
+    }
+    function closeModal() {
+        document.getElementById("propertyModal").classList.add("hidden");
+    }
+
+
+    function closeApplyModel() {
+        let modal = document.getElementById("applybtn");
+        let modalInstance = bootstrap.Modal.getInstance(modal);
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+    }
 </script>
 
 </html>
