@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sand & Rock Real Estate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/bootstrap.css">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+</head>
+<style>
+    .modal-dialog {
+        max-width: 80%;
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    .modal-content {
+        background: url('asset/image/model_back.jpg') no-repeat center center / cover;
+        color: white;
+    }
+
+    /* Common styles */
+    .image-container {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .rotating-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        display: none;
+        /* Initially hidden */
+        animation: rotate 5s linear forwards;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(500deg);
+        }
+    }
+
+    .carousel-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        margin-left: 0;
+        /* Fix cutting issue */
+    }
+
+    .carousel-item-custom {
+        flex: 0 0 33.33%;
+        padding: 5px;
+    }
+
+    .carousel-item-custom img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .home_text {
+        z-index: 2;
+        left: 20%;
+        top: 30%;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+        .carousel-item-custom {
+            flex: 0 0 50%;
+        }
+        
+        .home_text {
+            z-index: 2;
+            left: 40%;
+            top: 45%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-item-custom {
+            flex: 0 0 100%;
+        }
+
+
+        .home_text,
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    
+
+    .card-body {
+        height: 170px;
+        color: #2B5379;
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="index.html"><img src="asset/image/SandRock.svg" alt="logo"></a>
+        <label for="toggler">
+            <i class="fa fa-bars text-black"></i>
+        </label>
+        <input type="checkbox" id="toggler" name="">
+        <div class="menu">
+            <ul class="list">
+                <li class="list_item"><a href="about.html">About</a></li>
+                <li class="list_item"><a href="">Buy</a></li>
+                <li class="list_item"><a href="">Rent</a></li>
+                <li class="list_item"><a href="sell.html">Sell</a></li>                <li class="list_item"><a href="career.html">Career</a></li>
+                <li class="list_item" data-bs-toggle="modal" data-bs-target="#selModel">Contact Us</li>
+                <li class="list_item btn-list-property">
+                    <a href="#" class="text-white">List your Property</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="selModel" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="asset/image/sandrocklogo.svg" alt="" class="w-50 mb-5">
+
+                            <div class="container">
+                                <p><i class="fa fa-location-dot"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai
+                                    UAE</p>
+                                <p><i class="fa fa-phone"></i> +971-585505899</p>
+                                <p><i class="fa-solid fa-envelope"></i> info@sandandrockrealesate.com</p>
+                            </div>
+                            <hr>
+                            <p class="border-warning text-center">Copyright &copy; 2024 Sand&rocks</p>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="container">
+                                <h1 class="text-black">Contact us</h1>
+                                <div class="contact_head mb-3"></div>
+                                <p class="text-black" style="font-size: 13px;">Contact us today to explore exclusive luxury homes and find
+                                    your
+                                    perfect dream property.</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <input type="text" class="form-control input_border" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <input type="email" class="form-control input_border" placeholder="Email">
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <div class="phone-input-container">
+                                            <div class="dropdown" id="dropdown1">
+                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                <span>+971</span>
+                                            </div>
+                                            <input type="tel" id="phone1" placeholder="Phone">
+                                            <div class="dropdown-list text-black" id="dropdown-list1">
+                                                <div data-code="+971">
+                                                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE">
+                                                    UAE (+971)
+                                                </div>
+                                                <div data-code="+91">
+                                                    <img src="https://flagcdn.com/w40/in.png" alt="India">
+                                                    India (+91)
+                                                </div>
+                                                <div data-code="+1">
+                                                    <img src="https://flagcdn.com/w40/us.png" alt="USA">
+                                                    USA (+1)
+                                                </div>
+                                                <div data-code="+44">
+                                                    <img src="https://flagcdn.com/w40/gb.png" alt="UK">
+                                                    UK (+44)
+                                                </div>
+                                                <div data-code="+61">
+                                                    <img src="https://flagcdn.com/w40/au.png" alt="Australia">
+                                                    Australia (+61)
+                                                </div>
+                                                <div data-code="+81">
+                                                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan">
+                                                    Japan (+81)
+                                                </div>
+                                                <div data-code="+33">
+                                                    <img src="https://flagcdn.com/w40/fr.png" alt="France">
+                                                    France (+33)
+                                                </div>
+                                                <div data-code="+49">
+                                                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+                                                    Germany (+49)
+                                                </div>
+                                                <div data-code="+86">
+                                                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                                                    China (+86)
+                                                </div>
+                                                <div data-code="+39">
+                                                    <img src="https://flagcdn.com/w40/it.png" alt="Italy">
+                                                    Italy (+39)
+                                                </div>
+                                                <div data-code="+7">
+                                                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                                                    Russia (+7)
+                                                </div>
+                                                <div data-code="+55">
+                                                    <img src="https://flagcdn.com/w40/br.png" alt="Brazil">
+                                                    Brazil (+55)
+                                                </div>
+                                                <div data-code="+34">
+                                                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
+                                                    Spain (+34)
+                                                </div>
+                                                <div data-code="+52">
+                                                    <img src="https://flagcdn.com/w40/mx.png" alt="Mexico">
+                                                    Mexico (+52)
+                                                </div>
+                                                <div data-code="+27">
+                                                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa">
+                                                    South Africa (+27)
+                                                </div>
+                                                <div data-code="+47">
+                                                    <img src="https://flagcdn.com/w40/no.png" alt="Norway">
+                                                    Norway (+47)
+                                                </div>
+                                                <div data-code="+65">
+                                                    <img src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+                                                    Singapore (+65)
+                                                </div>
+                                                <div data-code="+82">
+                                                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
+                                                    South Korea (+82)
+                                                </div>
+                                                <div data-code="+31">
+                                                    <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands">
+                                                    Netherlands (+31)
+                                                </div>
+                                                <div data-code="+41">
+                                                    <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland">
+                                                    Switzerland (+41)
+                                                </div>
+                                                <div data-code="+46">
+                                                    <img src="https://flagcdn.com/w40/se.png" alt="Sweden">
+                                                    Sweden (+46)
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <input type="text" class="form-control input_border"
+                                            placeholder="Property type">
+                                    </div>
+                                    <div class="col-md-12 mb-2">
+                                        <textarea class="form-control input_border" rows="1"
+                                            placeholder="Description"></textarea>
+                                    </div>
+                                    <div class="col-md-12 mb-2 mt-2">
+                                        <button type="button"
+                                            class="btn btn-warning rounded-5 px-4 py-2 float-end">Connect Us</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0" style="position: relative;">
+        <div class="position-absolute translate-middle text-white home_text">
+            <h2>Find the Best Property in <span style="color: #E7FF62;">UAE</span> </h2>
+            <p>OR Expert Solutions For Every <span style="color: #E7FF62;">Square Feet</span> </p>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active dot1" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="dot1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="dot1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="asset/image/homeslide1.svg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/image/homeslide2.svg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/image/homeslide3.svg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <p class="text-primary">Explore Properties</p>
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-item-custom">
+                    <div class="card m-1">
+                        <img src="asset/image/townhouses.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Townhouses</h5>
+                            <p class="card-text">Spacious homes in community settings</p>
+                            <a href="#" class="btn view_all">View all </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-custom">
+                    <div class="card m-1">
+                        <img src="asset/image/Villas.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Villas</h5>
+                            <p class="card-text">Luxurious private residences</p>
+                            <a href="#" class="btn view_all">View all </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-custom">
+                    <div class="card m-1">
+                        <img src="asset/image/Offices.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Offices</h5>
+                            <p class="card-text">Retail spaces, business hubs, co-working spaces</p>
+                            <a href="#" class="btn view_all">View all </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-custom">
+                    <div class="card m-1">
+                        <img src="asset/image/apartment.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Apartments </h5>
+                            <p class="card-text">High-end & budget-friendly options</p>
+                            <a href="#" class="btn view_all">View all </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-custom">
+                    <div class="card m-1">
+                        <img src="asset/image/landandcommarcial.svg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Land Commercial Projects</h5>
+                            <p class="card-text">Investment-ready plots & large-scale projects</p>
+                            <a href="#" class="btn view_all">View all </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mt-3">
+
+            <div>
+                <button class="btn btn-secondary dot-btn active" data-index="0"></button>
+                <button class="btn btn-secondary dot-btn" data-index="1"></button>
+                <button class="btn btn-secondary dot-btn" data-index="2"></button>
+                <button class="btn btn-secondary dot-btn" data-index="3"></button>
+                <button class="btn btn-secondary dot-btn" data-index="4"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container mt-5">
+            <p class="text-primary">Who We are</p>
+            <h2>Expert guidance to help you find the right <span class="text-primary">real estate</span>.</h2>
+            <p>With personalized guidance, we help you find the ideal property that fits your needs, lifestyle, and
+                budget
+            </p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <img src="asset/image/img1.svg" alt="Commercial Projects">
+                        <div class="overlay-text">
+                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
+                                class="small text-nowrap">Commercial Projects</span>
+                        </div>
+
+                    </div>
+                    <p class="text-center">High-value investments. </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <img src="asset/image/office.svg" alt="Commercial Projects">
+                        <div class="overlay-text">
+                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
+                                class="small text-nowrap">Office</span>
+                        </div>
+                    </div>
+                    <p class="text-center">Premium office spaces for rent.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <img src="asset/image/land.svg" alt="Commercial Projects">
+                        <div class="overlay-text">
+                            <img src="asset/image/commercial.svg" alt="" style="width: 22px; margin-right: 5px;"> <span
+                                class="small text-nowrap">Land</span>
+                        </div>
+                    </div>
+                    <p class="text-center">Prime land for development.</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-start">
+                <!-- Item 1 -->
+                <div class="me-4 text-center">
+                    <img src="asset/image/rent_Icon.jpg" alt="Icon 1" style="width: 50px;" class="mb-2">
+                    <h6 class="fw-bold mb-1 text-primary">50k+ renters</h6>
+                    <p class="text-muted small mb-0">believe in our service</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="text-center">
+                    <img src="asset/image/rent_Icon2.jpg" alt="Icon 2" style="width: 50px;" class="mb-2">
+                    <h6 class="fw-bold mb-1 text-primary">10k+ properties</h6>
+                    <p class="text-muted small mb-0">and houses ready for occupancy</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid p-0">
+        <div class="details py-5 position-relative text-white">
+            <div>
+                <img src="asset/image/way.jpg" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="testimonial p-3 mt-5 mb-5">
+            <h3 class="text-center">Testimonials</h3>
+            <p class="text-center">See what our property managers, landlords, and <br> tenants have to say</p>
+            <div class="a">
+                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                    agency,
+                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
+                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <h6 class="text-center mb-3">Abhishek</h6>
+            </div>
+            <div class="b">
+                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                    agency,
+                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
+                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <h6 class="text-center mb-3">Hitesh</h6>
+            </div>
+            <div class="c">
+                <p class="text-center container mt-5 mb-3">Experience the excellence of Dubai's top-rated real estate
+                    agency,
+                    renowned for delivering high-end properties, expert market insights, and tailored solutions. We
+                    specialize in luxury estates and premium investment opportunities across Dubai</p>
+                <h6 class="text-center mb-3">Pawas Goyal</h6>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="image-container" id="image1">
+                    <img src="asset/image/testimonial1.jpg" alt="Amara Sheikh">
+                    <div class="rotating-border"></div>
+                </div>
+                <div class="image-container" id="image2">
+                    <img src="asset/image/testimonial2.jpg" alt="">
+                    <div class="rotating-border"></div>
+                </div>
+                <div class="image-container" id="image3">
+                    <img src="asset/image/testimonial3.jpg" alt="">
+                    <div class="rotating-border"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Logo and Address Section -->
+                <div class="col-md-4 mb-3">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="asset/image/sandrocklogo.svg" alt="Sand & Rock Logo" class="w-50 me-2">
+
+                    </div>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 201,Bank Street Building,Near Burjuman Mall,Dubai UAE
+                    </p>
+                    <p><i class="fas fa-phone-alt me-2"></i> +971-585505899</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@sandandrockrealesate.com</p>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-md-2 mt-3 mb-3">
+                    <h6 class="fw-bold" style="color: #2B5379;">QUICK LINKS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Project</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links Section -->
+                <div class="col-md-2 mt-3 mb-3">
+                    <h6 class="fw-bold" style="color: #2B5379;">LEGAL LINKS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Conditions</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="col-md-2 mt-3 mb-3">
+                    <h6 class="fw-bold" style="color: #2B5379;">SOCIAL MEDIA</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Twitter</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">YouTube</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+
+        </div>
+        <div class="text-center mt-3 p-2" style="background-color: #2B5379;">
+            <small>Copyright &copy; 2024 Sand&rocks</small>
+        </div>
+    </footer>
+</body>
+<script src="asset/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Select the main image element
+    const mainImage = document.getElementById('main-image');
+
+    // Select all thumbnail images
+    const thumbnails = document.querySelectorAll('.property-thumbnails img');
+
+    // Add click event listeners to each thumbnail
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            // Set the src of the main image to the clicked thumbnail's src
+            mainImage.src = this.src;
+        });
+    });
+
+
+    function initializeDropdown(dropdownId, listId) {
+        const dropdown = document.getElementById(dropdownId);
+        const dropdownList = document.getElementById(listId);
+
+        // Toggle dropdown visibility
+        dropdown.addEventListener("click", () => {
+            dropdownList.style.display =
+                dropdownList.style.display === "block" ? "none" : "block";
+        });
+
+        // Handle country selection
+        dropdownList.addEventListener("click", (e) => {
+            if (e.target.closest("div")) {
+                const selectedDiv = e.target.closest("div");
+                const flagImg = selectedDiv.querySelector("img").src;
+                const countryCode = selectedDiv.getAttribute("data-code");
+                dropdown.querySelector("img").src = flagImg;
+                dropdown.querySelector("span").textContent = countryCode;
+                dropdownList.style.display = "none";
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target) && !dropdownList.contains(e.target)) {
+                dropdownList.style.display = "none";
+            }
+        });
+    }
+
+    // Initialize all 3 dropdowns
+    initializeDropdown("dropdown1", "dropdown-list1");
+    initializeDropdown("dropdown2", "dropdown-list2");
+    initializeDropdown("dropdown3", "dropdown-list3");
+
+
+</script>
+<script>
+    // Select all image containers and heading elements
+    const imageContainers = document.querySelectorAll('.image-container');
+    const headings = {
+        a: document.querySelector('.a'),
+        b: document.querySelector('.b'),
+        c: document.querySelector('.c')
+    };
+
+    // Mapping index to class names
+    const classes = ['a', 'b', 'c'];
+
+    let currentIndex = 0;
+
+    // Function to toggle heading visibility
+    function toggleHeading(index) {
+        // Hide all headings
+        Object.keys(headings).forEach((key) => {
+            headings[key].style.display = 'none';
+        });
+        // Show current heading
+        headings[classes[index]].style.display = 'block';
+    }
+
+    // Function to run animation on current image
+    function runAnimation() {
+        // Remove active animation from all images
+        imageContainers.forEach((container) => {
+            const border = container.querySelector('.rotating-border');
+            border.style.display = 'none';
+        });
+
+        // Show animation on the current image
+        const currentContainer = imageContainers[currentIndex];
+        const border = currentContainer.querySelector('.rotating-border');
+        border.style.display = 'block';
+
+        // Update heading
+        toggleHeading(currentIndex);
+
+        // Move to the next image after 3 seconds
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+            runAnimation();
+        }, 3000); // Match the animation duration
+    }
+
+    // Start the animation sequence
+    runAnimation();
+
+    // slider js start
+
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const dots = document.querySelectorAll('.dot-btn');
+    const totalImages = document.querySelectorAll('.carousel-item-custom').length;
+    let index = 0;
+    let autoSlide;
+
+    function getVisibleItems() {
+        return window.innerWidth <= 576 ? 1 : window.innerWidth <= 768 ? 2 : 3;
+    }
+
+    function updateCarousel() {
+        const visibleItems = getVisibleItems();
+        const maxIndex = totalImages - visibleItems;
+
+        if (index > maxIndex) index = 0;  // **Fix: Last se pehla slide ho jayega**
+        if (index < 0) index = maxIndex;  // **Fix: First se last pe wapas ja sake**
+
+        const shiftPercentage = (100 / totalImages) * index;
+        wrapper.style.transform = `translateX(-${shiftPercentage}%)`;
+
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // **Fix: Correct dot mapping**
+        let activeDotIndex = Math.min(index, dots.length - 1);
+        dots[activeDotIndex].classList.add('active');
+    }
+
+
+
+    // **Dot Button Click**
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            index = parseInt(e.target.getAttribute('data-index'));
+            updateCarousel();
+            resetAutoSlide();
+        });
+    });
+
+    // **Auto Slide**
+    function startAutoSlide() {
+        autoSlide = setInterval(() => {
+            index++;
+            updateCarousel();
+        }, 5000);
+    }
+
+    // **Restart Auto Slide on Manual Click**
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        startAutoSlide();
+    }
+
+    // **Start Auto Slide Initially**
+    startAutoSlide();
+
+
+</script>
+
+</html>
